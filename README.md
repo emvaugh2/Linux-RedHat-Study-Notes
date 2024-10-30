@@ -10,8 +10,9 @@
 * Types of Linux
 * Using Linux (Beginner)
 * Docker and Vagrant
+* Linux Security
 
-** Types of Linux
+** Types of Linux **
 Server Linux - a Linux version that is used as a server. It doesn't always have a GUI. You usually connect to the server by SSH-ing into the terminal. Servers are usually in a data center or in the cloud. There is less software installed so you have less applications to keep track of. This is general information on servers so nothing new here. 
 
 Desktop Linux - a Linux version that's used for daily tasks. It's like a personal computer. This definitely has a GUI. 
@@ -22,7 +23,7 @@ Linux Virtual Machines - a Linux VM. Pretty straightfoward. The OS is sharing re
 
 Different Architectures - the 64-bit CPU from Intel is the most common. x86 64-bit. Get familiar with this. 
 
-** Using Linux
+** Using Linux **
 
 Use SSH to connect to a keyboard and monitor on the target server. Secure SHell. A shell is a command interpreter. The three layers of the SSH protocol are the transport, authentication, and connection layers. You can also use SSH to transfer files. 
 
@@ -38,7 +39,7 @@ The root user is the highest access of any user. You may need to log into the ro
 
 A Cloud Guru (ACG) then had me complete a simple lab where I logged into a CentOS and Ubuntu distribution of Linux to install a software called `Elinks` and then display some text using the software. They did this to show a difference between the install commands for both distributions. CentOS uses `yum` and Ubuntu uses `apt-get`. I'll document this in another GitHub repo.
 
-** Docker and Vagrant
+** Docker and Vagrant **
 
 A docker container contains everything required to run an application. They don't have to be self-contained. It's like a stripped down version of an OS image to allow you to do a specific task or run some code. 
 
