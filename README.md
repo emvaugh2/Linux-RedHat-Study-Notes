@@ -3,6 +3,22 @@
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
 
+
+## 10.31.2024
+
+
+**Today's Topics**
+* Working with CentOS
+* Linux Core Subsystems (systemd, networking, nftables, firewalld)
+
+The user ID (uid) is what separates a normal user from a root user. The uid for root users is 0. Use `visudo` command to alternate the sudo files. You can also use this to make custom permissions for users. 
+
+Use `sudo -i` to open an interactive sudo session. This is so you don't have to keep entering in your password over and over. 
+
+Use the `man` command (short for manual) to look at the configuration page for that file. This can be used for `yum`, `Bash`, etc. Not all of them will have a document directory. 
+
+
+
 ## 10.30.2024
 
 
