@@ -23,6 +23,15 @@ Here's a quick reference sheet for editing files using `vim`.
 Here's a quick reference sheet for editing files using `nano`.
 ![Image](NanoShortCuts.png)
 
+Runlevels - defined what a server looked like after it finished bootting. In CentOS, `systemd` manages this using targets. A target is made up of a number of services and other unit files. 
+
+`systemctl get-default` gives us the default target that this system will boot into. You can get a list of all the targets. You can also create your own targets. I'm not going to worry about this for now since I still don't know the impact of this. 
+
+You can manage services by using `systemctl` as well. You have start, stop, restart, reload, enable, and disable for starters. 
+
+You can also create your own service file. They all have a unit section, service, and install section. You also have Type Options. 
+
+I completed a lab that made use of `grep` to take information from one file and put it into another. We recorded the log messages of the day, the number of users on the CLI, and the number of CPUs on the host machine. We put all of that information into a new file. There was a lot of use of `cd`, `rm` and `ls` to navigate and correct any mistakes. Also, we can just use `grep ### > filepath/filename` in order to directly take your output and put it into another file. 
 
 
 ## 10.30.2024
