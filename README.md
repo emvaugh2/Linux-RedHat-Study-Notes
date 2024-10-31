@@ -37,6 +37,10 @@ I completed a lab that made use of `grep` to take information from one file and 
 
 We also edited user permissions in `visudo` in order to lock down one user named Adam and elevate a user named Bob to have root access pretty much. Use `sudo - usernmae` to switch between users. You can use `logout` to logout of that user. Pretty straight forward lab although I don't fully understand how to edit the `visudo` options. 
 
+`nftables` has replaced iptables in CentOS. "`iptables` ran the firewall (and firewalld used it as the back end)."
+
+I completed a short lab playing with `vim` and `nano`. Nothing to really speak on. Once again, all labs will be documented later on. Simply taking notes here. 
+
 
 
 ## 10.30.2024
