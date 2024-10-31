@@ -17,6 +17,12 @@ Use `sudo -i` to open an interactive sudo session. This is so you don't have to 
 
 Use the `man` command (short for manual) to look at the configuration page for that file. This can be used for `yum`, `Bash`, etc. Not all of them will have a document directory. 
 
+Here's a quick reference sheet for editing files using `vim`.
+![Image](VimShortCuts.png)
+
+Here's a quick reference sheet for editing files using `nano`.
+![Image](NanoShortCuts.png)
+
 
 
 ## 10.30.2024
