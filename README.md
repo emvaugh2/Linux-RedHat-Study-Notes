@@ -8,6 +8,7 @@
 
 **Today's Topics**
 * The Linux Kernel
+* Build Your Own Linux Kernel from Scratch
 
 `uname` gives us imoprtant information on our system. You can see the version of the Linux kernel here. The instructor then used a bunch of pre-configured commands to download the kernel source tree and required documentation. I didn't fully understand this so we'll have to revisit it. 
 
@@ -34,6 +35,8 @@ Quick detour, I've been seeing the `.tar` extension for a while now. Never knew 
 RPM - Red-Hat Package Manager. "The RPM kernel package also includes kernel modules, which are pieces of code that can be loaded into the kernel at runtime. These modules extend the functionality of the kernel without requiring a full reboot, allowing for support of various hardware and filesystems."
 
 We can use `lsmod` to see all the modules that are currently in use. 
+
+You can add modules to a blacklist so that these modules are not loaded during the boot process. 
 
 
 
