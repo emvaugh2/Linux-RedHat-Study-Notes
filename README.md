@@ -38,6 +38,12 @@ We can use `lsmod` to see all the modules that are currently in use.
 
 You can add modules to a blacklist so that these modules are not loaded during the boot process. 
 
+Use `update grub` to update the boot loader. Grub stands for GRand Unified Bootloader. The boot loader is the first piece of code that is loaded when a computer powers on. 
+
+Kernel - the source code. The brains of the operation. It works between the hardware and software. It's responsible for the memory management, process management, device drivers, and system calls and security. 
+OS - the set of applications and packages that are added for services. Inlcudes the system services, applications, and user accounts. 
+Distro - a specific set of packages and applications added to the kernel. 
+
 
 
 ## 10.31.2024
