@@ -9,6 +9,11 @@
 **Today's Topics**
 * Linux File System
 
+Use the command `mount` to mount a directory.
+
+![Image](LinuxFileSystem1.png)
+
+Lets break down each part of this. You have the device name. Then it's listed "on" the directory (see the second part. It has a directory name or simply "/" for the root directory). Then it tells you the type of file system. Then it shows you the options associated with that mount. 
 
 ## 11.01.2024
 
