@@ -9,11 +9,43 @@
 **Today's Topics**
 * Linux File System
 
-Use the command `mount` to mount a directory.
+Use the command `mount` to mount a directory. Use `umount` to unmount a folder. 
 
 ![Image](LinuxFileSystem1.png)
 
 Lets break down each part of this. You have the device name. Then it's listed "on" the directory (see the second part. It has a directory name or simply "/" for the root directory). Then it tells you the type of file system. Then it shows you the options associated with that mount. 
+
+Use `df` to see the disk space usage for each file system. Use the `-h` option to make it more human-readable. 
+
+`blkid` and `lsblk` gives us information on our hard drive devices I believe. When he uses `lsblk`, it shows him all the hard drives, namespaces, and partitions. So I believe this is what the command does. 
+
+"The lsblk command in Linux is used to list information about all available or specified block devices. Block devices are storage devices that provide data in blocks, such as hard drives, solid-state drives, and USB drives"
+
+Use `fuser` followed by the mounted directory name to find out which process is using this directory based on the PID. You can either use the `-k` option to help kill off the process so you can unmount the directory. Also, use `lsof | grep ###` to get more information on this process. 
+
+To keep directories mounted after you reboot the system, you need to list the mount directory information in the `fstab` folder. Use the UUID for this if you can since that never changes. 
+
+Swap space is located on the physical, hard disk memory. All your computer processes are being run in the RAM so the processes that haven't been used for a while will be put into swap space so that they're not taking up too much RAM. Hard disk storage is for long term use. Use `swapon --show` to see the information on your swap space. You can have a dedicated partition or file for your swap space. Use the `mkswap <disk name>` command to create a swap space. 
+
+All the resources that the Linux system knows how to operate on are called Units which contain unit files. We'll use `systemd` to manage these. The instructor created one of these from scratch to show how to mount a directory. This is a bit beyond me right now. 
+
+Ext - extended file system. There are mutliple versions: ext2, ext3, and ext4. Use `mkfs` to make a file system. Choose a disk to partition. You can use `parted <disk name>` to start an interactice wizard to help you partition your disk. Then, you can start to create file systems on each partition. 
+
+I learned about partitioning a disk back when I was studying for the CompTIA A+ but I didn't know what it was useful for or what exactly I was doing. Partitioning a disk is basically taking the physical disk space and separating it into isolated storage spaces. I would compare this to all the ports on a switch physically being in one VLAN (by default, VLAN 1) but then you use VLANs on the switch to created additional LANs. Lets say you divide all the ports equally into 4 VLANs. This is similar to partitioning a disk. 
+
+Use `fsck` (file system check) to check and repair a Linux file system. 
+
+"The `tune2fs` command in Linux is used to adjust various parameters of an ext2, ext3, or ext4 file system. It’s a powerful utility for changing settings on existing file systems without reformatting them."
+
+"The `dumpe2fs` command in Linux is used to display detailed information about ext2, ext3, or ext4 file systems. It provides a "dump" of file system metadata, which can help you understand its configuration, usage, and status without modifying it."
+
+"The `debugfs` command in Linux is an interactive utility for examining and debugging ext2, ext3, and ext4 file systems. Unlike `dumpe2fs`, which only shows file system information, debugfs is a more advanced tool that allows both viewing and modifying file system structures."
+
+XFS is the default file system for RHEL. `nvme1n1p5` basically says we're using NVME in namespace 1 in partition 5. I needed this for my own sanity. A namespace is a logical division of a drive. Think of it as a virtual drive. Partitions and namespaces are very similar. You divide the drive into namespaces and the namespace into partitions. 
+
+`btrfs` (short for B-tree file system) is the default file system for Linux. You can use btrfs convert to change other file systems to btrfs. 
+
+
 
 ## 11.01.2024
 
