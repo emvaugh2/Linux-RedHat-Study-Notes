@@ -45,6 +45,11 @@ XFS is the default file system for RHEL. `nvme1n1p5` basically says we're using 
 
 `btrfs` (short for B-tree file system) is the default file system for Linux. You can use btrfs convert to change other file systems to btrfs. 
 
+The "d" in `systemd` and `smartd` stands for daemon. So keep that in mind. 
+
+You can use `autofs` to automatically mount drives. You have to install it first though. 
+
+He also went over disk encryption. 
 
 
 ## 11.01.2024
