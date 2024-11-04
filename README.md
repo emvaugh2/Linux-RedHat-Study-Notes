@@ -15,6 +15,20 @@
 **Today's Topics**
 * Linux File System Permissions
 
+Octal permissions - this is the hierarchical file descriptions for Linux. 
+
+First field is will be either `d`, `l`, or `-`. D means directory, L means simlink, and - (dash) means a file. 
+R - read and the number is 4. W - write and the number is 2. X - Execute and the number is 1. 
+The final field indicates a "special" permission such as SELinux, ACLs, or other similar settings for that file. 
+
+There are 5 categories in the octal permissions. 
+- Denotes if file is a directory, symlink, or file
+- Denotes the owner file permissions
+- Denotes the group file permissions
+- Denotes the user file permissions
+- Denotes "special" permissions
+
+You use `chmod` to change the permissions on a file. 
   
 
 ## 11.02.2024
