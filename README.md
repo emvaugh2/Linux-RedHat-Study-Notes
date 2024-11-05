@@ -2,6 +2,16 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.05.2024
+
+
+**Today's Topics**
+* Linux File System Permissions (continued again)
+* Lab notes
+
+
+
+
 ## 11.04.2024
 
 
@@ -13,6 +23,8 @@
 Use `getfacl` and `setfacl` to get and set folder ACLs on a directory. This is if you want more granular control other than just octal permissions. I'm assuming the "f" in facl stands for folder. For the 5th category, you may see a "+" on the directory indicating there is an ACL applied there. 
 
 Use `getfacl` to determine which rules are actually in place. Sometimes, we don't know if the ACL or the octal permissions are taking over. Do `getfacl` on the file or folder to make sure. 
+
+Use `fdisk` to create a partition on a desk. 
 
 
 
