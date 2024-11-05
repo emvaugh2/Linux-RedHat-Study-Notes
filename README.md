@@ -8,6 +8,37 @@
 **Today's Topics**
 * Linux File System Permissions (continued again)
 * Lab notes
+* LPI Linux Essentials
+
+SELinux labels are pieces of information. Not sure what they're used for. We also have SELinux Booleans which, once again, not really sure what this is required for. 
+
+Sticky bits means that a file can be deleted only by the owner of the file or the owner or the directory. SetGID is useful for executable files. It sets the group owner of the process to the group owner of the file, regardless of who is running the command. SetUID is also useful for executable files. It sounds like this does the same thing as the setGID. Not sure what the difference is. 
+
+We also went over `chatttr` and `lsattr` although we were told we probably won't run into this. 
+
+The `su` in `sudo su - bob` stands for switch user or substitute user. 
+
+Distribution - comprised of a kernel, GNU core, X server (display server for the GUI), and lastly the GUI. 
+
+Hardware is incorporated into the file hierarchy through the /dev and /sys directories, and process information is mapped in /proc. Use `uname -r` to check the kernel version. Use `lsb_release -a` to see the distribution you're running. 
+
+The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the foundational utilities expected to exist on every OS. 
+
+Examples of embedded Linux systems: Android and Raspberry Pi. 
+
+Completed a simple SSH lab. I've been doing this everyday for the past week so this was really easy. You can also who `whoami` to tell you which user you're currently logged in as. 
+
+Typical (open-source) desktop applications: OpenOffice (think Microsoft office things like Words and Excel), LibreOffice, Firefox, Thunderbird (email client), and GIMP (basically Photoshop). 
+
+Typical (open-source) server applications: Apache HTTP Server (web server), NGINX (web server + hella other stuff), MySQL, MariaDB, Samba (file sharing (uses CIFS)), Network File System (NFS, which is a protocol, not an application), and ownCloud (similar to Dropbox but stored on your own connected hardward), 
+
+Development languages. Lets talk about it. A shell script is designed to be run by the CLI using various scripting languages. Bash is a common shell (born again shell). C is a general-purpose imperative programming language. Java is class-based, object oriented general purpose language. Javascript is used for web pages. You also have Perl, PHP, and Python. 
+
+Packages - a collection of files needed to install an application. Debian packages - dpkg and uses apt-get (uses .dev files). Red Hat Package manager - rpm and uses yum (uses .rpm files). These commands also look up dependencies for each package and they also store metadata about the application. 
+
+apt stands for Advanced Package Tool. yum stands for Yellowdog Updater, Modified.
+
+Forking occurs when developers use the main source code and "fork" from it to create their own version of an open-source software. 
 
 
 
