@@ -16,7 +16,27 @@ Commands in the Terminal are entered in as Standard In (STDIN). This follows a s
 
 ![Image](CommandPromptFlow.PNG)
 
+Linux commenting starts with a pound sign (#). 
 
+Dot files are hidden files. You can see these when you do `ls -a` or `ls --all`
+
+"Bash takes your input and parses it—meaning it breaks it down into parts (or "tokens") to understand what you’re asking it to do." This comes into play if you have like, a command, the option, and then the object that it's acting on. Parsing just means analyzing each section of the command (because commands can have options and objects too) and then either interpret the entire command or return an error. This is "parsing a command".
+
+Options are also called flags in Linux. You can group flags together. So instead of `ls -a -h -l' or `ls --all --human-readable --long-format` (which is called long format btw. Might be helpful to do it this way before you do the shorthand), you can just type `ls -ahl` altogether. Definitely convenient but you should check the `man <insert command>` info to know exactly what each option stands for and does. 
+
+There are "hard-coded" BASH variables that you can't alter. Those three are $HOME (the current user's home directory), $PS1 (the primary prompt string) and $PATH (a colon-separated list of directories where the shell looks for commands). Don't trip too much on this right now. I actually don't even think we'll need $PS1 at all. 
+
+Give a variable a value using `<variable_name>="<whatever value or string>"`. Now to reference that variable, you must use `$<variable_name>`. You must use that dollar sign. You can check this by doing `echo $<variable_name>` and getting the desired output. 
+
+Go back over the `echo $PS1`  output. This will show you what those SecureCRT automatic commands are doing. This is all Linux scripting!!!
+
+You can assign a variable a value of an output by doing `<variable_name>=$(<command_name>)`. For example, you van do `var1=$(ls)` to assign the variable `var1` the output of the `ls` command. Use `echo` to see the output. 
+
+Quoting - used to disable special treatmeant of certain characters and words, as well as to prevent parameter expansion and preserve what is quoted. Basically you can put the quotes around an input for a variable so that it takes that entire value or string. Or paragraph. Whatever you put in there. If you don't put the quotation marks and you have a space, the terminal will return an error. Now, you can use the `\` character to move preserve the value of the next character. 
+
+Also, with single quotes so '', this will take the exact value of everything in the single quotes even the escape character `\`. So it doesn't acknowledge any variables. It basically takes the string character for character. 
+
+Double quotes will acknowledge the variable values but it will take the character value of the escape character. 
 
 ## 11.05.2024
 
