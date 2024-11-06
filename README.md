@@ -38,6 +38,12 @@ Also, with single quotes so '', this will take the exact value of everything in 
 
 Double quotes will acknowledge the variable values but it will take the character value of the escape character. 
 
+You can use `cd ~` to change to your user's home directory. 
+
+When you do `>` to redirect the output of a command into a file, you will overwrite the entire file with the new output. If you want to add the output to the end of a file (this is called appending), you should use `>>` instead so you don't overwrite the file.
+
+Colons `:` are used as delimiters in the file path. So basically it just breaks them up so you can include multiple file paths to a variable. So look at them like a comma pretty much. 
+
 ## 11.05.2024
 
 
