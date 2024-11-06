@@ -44,6 +44,8 @@ When you do `>` to redirect the output of a command into a file, you will overwr
 
 Colons `:` are used as delimiters in the file path. So basically it just breaks them up so you can include multiple file paths to a variable. So look at them like a comma pretty much. 
 
+Yeah that backslash lab was kicking my a** lmao. It feel like choosing C 8 times in a row on a scantron sheet. Like this can't possibly be the right answer. I'll have to get more familiar with that aspect. 
+
 ## 11.05.2024
 
 
