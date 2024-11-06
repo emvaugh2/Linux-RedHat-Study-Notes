@@ -38,13 +38,27 @@ Also, with single quotes so '', this will take the exact value of everything in 
 
 Double quotes will acknowledge the variable values but it will take the character value of the escape character. 
 
-You can use `cd ~` to change to your user's home directory. 
+You can use `cd ~` to change to your user's home directory. The tilde is for the home directory. 
 
 When you do `>` to redirect the output of a command into a file, you will overwrite the entire file with the new output. If you want to add the output to the end of a file (this is called appending), you should use `>>` instead so you don't overwrite the file.
 
 Colons `:` are used as delimiters in the file path. So basically it just breaks them up so you can include multiple file paths to a variable. So look at them like a comma pretty much. 
 
 Yeah that backslash lab was kicking my a** lmao. It feel like choosing C 8 times in a row on a scantron sheet. Like this can't possibly be the right answer. I'll have to get more familiar with that aspect. 
+
+You can just normally type in a manual page (man page) to search for whatever text you're looking for. This makes searching man pages easier. 
+
+Info pages are more detailed man pages. Use `info <command>` to get to the info page. 
+
+When we install a hard drive, we'll create a file system on that drive. It will follow the Filesystem Hierarchy Standard (FHS) for Linux. If you do a regular `cd`, it will take you to the home directory. `cd /` is the top/root level of the file system. 
+
+![Image](RootDirectoryFolders.PNG)
+
+The terminal has tab completion just like the Cisco CLI. Also, to go back to your previous directory (not up a directory but back to the one you just came from), use `cd -`. You can also use `cd ../..` to go up two levels.
+
+If you put a period in front of a file or directory, it will be hidden. For example, file5 and .file5. To see them when you do a `ls`, use `ls -a` so they appear. 
+
+A home directory is typically created for every ordinary user on a Linux system under /home. This is where you automatically land when you log into a user's profile. 
 
 ## 11.05.2024
 
