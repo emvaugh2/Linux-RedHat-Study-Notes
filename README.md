@@ -2,6 +2,16 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+
+## 11.06.2024
+
+
+**Today's Topics**
+* LPI Linux Essentials (continued)
+
+
+
+
 ## 11.05.2024
 
 
@@ -39,6 +49,8 @@ Packages - a collection of files needed to install an application. Debian packag
 apt stands for Advanced Package Tool. yum stands for Yellowdog Updater, Modified.
 
 Forking occurs when developers use the main source code and "fork" from it to create their own version of an open-source software. 
+
+"Compilation is the process of taking the human-readable source code and translating it into a lower-level form called object code." So when a computer is compiling your code, it's taking whatever you wrote in your coding language (or in the case of like, Docker, just plain ol' sentences) and turning that into a binary code. The computer's hardware can only read binary which is 0s and 1s. So compiling is taking the human-readable code and turning it into computer food. 
 
 
 
