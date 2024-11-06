@@ -9,6 +9,12 @@
 **Today's Topics**
 * LPI Linux Essentials (continued)
 
+A "computer" is RAM, storage, and CPU. That's it. 
+The "$" at the end of the prompt string denotes that the current user is unprivileged. So basically, you're not the root user. If you see the "$" sign, you're unprivileged. Think of it as the ">" sign in the Cisco CLI where you're in User EXEC mode. On the other end, if you're the root user, the end of the prompt will have a "#" sign. This is the same way in Privileged EXEC mode in the Cisco CLI. 
+
+Commands in the Terminal are entered in as Standard In (STDIN). This follows a syntax. The output is either Standard Out (STDOUT) or Standard Error (STDERR). See below. 
+
+![Image](CommandPromptFlow.PNG)
 
 
 
