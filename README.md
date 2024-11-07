@@ -9,7 +9,7 @@
 
 Lets managed some folders! Use the `mkdir`, `cp`, `mv`, and `rm` commands to make, copy, move, and remove folders. 
 
-Files are case sensitive. That's when you're manipulating them in any way, even searching for them. 
+Files are case sensitive. That's when you're manipulating them in any way, even searching for them. Also, you can use the `mv` command to rename files. Ask Chat GPT about this. 
 
 Globbing - a useful way to search for information. Think of how a wildcard asterisk can represent "anything". This is what gobbling is. We have a few ways to go about it. Lets start with the question mark `?`. The question mark represents any ONE CHARACTER. So if you have `file?`, then Linux will search for all things that start with `file` but end with any one character. If you have `???`, then Linux will search any file that is 3 characters long. If you have `????4`, then Linux will search for a 5 length-file that starts with anything for the first 4 characters but ends in the number 4. 
 
@@ -17,6 +17,9 @@ The asterisk represents any character that is ANY length, not just 1 character. 
 
 ![Image](LinuxBracketSearch.PNG)
 
+Archiving is the process of combining multiple files and/or directories into a single file. We'll be using `tar` (tape archive) for this. I'll need to practice these options. 
+
+Lets talk compression. Compression is the process of reducing the amount of storage that files or archives consume. We have different compression options. We have gzip (default compression for tar), bzip2 (an alternative. usually slower than gzip due to higher compression), and zip (the same compression as Windows. popular). 
 
 ## 11.06.2024
 
