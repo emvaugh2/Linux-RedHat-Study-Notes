@@ -2,6 +2,21 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.07.2024
+
+**Today's Topics**
+* LPI Linux Essentials (2.4 - 3.X)
+
+Lets managed some folders! Use the `mkdir`, `cp`, `mv`, and `rm` commands to make, copy, move, and remove folders. 
+
+Files are case sensitive. That's when you're manipulating them in any way, even searching for them. 
+
+Globbing - a useful way to search for information. Think of how a wildcard asterisk can represent "anything". This is what gobbling is. We have a few ways to go about it. Lets start with the question mark `?`. The question mark represents any ONE CHARACTER. So if you have `file?`, then Linux will search for all things that start with `file` but end with any one character. If you have `???`, then Linux will search any file that is 3 characters long. If you have `????4`, then Linux will search for a 5 length-file that starts with anything for the first 4 characters but ends in the number 4. 
+
+The asterisk represents any character that is ANY length, not just 1 character. So if you search *4, you will get any file that ends in 4 such as file4, LinuxIsFun4, Windows10.4, etc. Anything length of characters. But wait, there's more. You can also use brackets to further constrain your search. Check the chart below and make sure your syntax is correct. 
+
+![Image](LinuxBracketSearch.PNG)
+
 
 ## 11.06.2024
 
