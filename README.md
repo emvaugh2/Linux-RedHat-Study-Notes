@@ -5,7 +5,7 @@
 ## 11.07.2024
 
 **Today's Topics**
-* LPI Linux Essentials (2.4 - 3.X)
+* LPI Linux Essentials (2.4 - 3.3)
 
 Lets managed some folders! Use the `mkdir`, `cp`, `mv`, and `rm` commands to make, copy, move, and remove folders. 
 
@@ -20,6 +20,14 @@ The asterisk represents any character that is ANY length, not just 1 character. 
 Archiving is the process of combining multiple files and/or directories into a single file. We'll be using `tar` (tape archive) for this. I'll need to practice these options. 
 
 Lets talk compression. Compression is the process of reducing the amount of storage that files or archives consume. We have different compression options. We have gzip (default compression for tar), bzip2 (an alternative. usually slower than gzip due to higher compression), and zip (the same compression as Windows. popular). 
+
+I'll definitely have to practice all of these tar flags. I don't understand them fully right now. 
+
+Piping - the process of taking the output from one command as the input to another command. Quick detour, you can use `grep <word you want to search> <file you want to search in>`. Back to piping, the left side of the pipe is the output from the original command and it will use this output as the input to the command on the right side of the pipe. 
+
+I/O redirection may be used to feed input to  comand from a file, or to send the output of a command to a file. This is the same thing as `echo "whatever_output" > file.txt`. I don't understand when we would use "read input from a file". Seems very arbitrary. 
+
+Regular Expressions (regex) - used to match patterns in text, similar to globbing. Seems like a powerful too but I don't see why we would need it just yet. Seems like an extension of `grep`. 
 
 ## 11.06.2024
 
