@@ -5,7 +5,7 @@
 ## 11.07.2024
 
 **Today's Topics**
-* LPI Linux Essentials (2.4 - 3.3)
+* LPI Linux Essentials (2.4 - 4.1)
 
 Lets managed some folders! Use the `mkdir`, `cp`, `mv`, and `rm` commands to make, copy, move, and remove folders. 
 
