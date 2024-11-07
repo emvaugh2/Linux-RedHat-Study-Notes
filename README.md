@@ -27,7 +27,9 @@ Piping - the process of taking the output from one command as the input to anoth
 
 I/O redirection may be used to feed input to  comand from a file, or to send the output of a command to a file. This is the same thing as `echo "whatever_output" > file.txt`. I don't understand when we would use "read input from a file". Seems very arbitrary. 
 
-Regular Expressions (regex) - used to match patterns in text, similar to globbing. Seems like a powerful too but I don't see why we would need it just yet. Seems like an extension of `grep`. 
+Regular Expressions (regex) - used to match patterns in text, similar to globbing. Seems like a powerful too but I don't see why we would need it just yet. Seems like an extension of `grep`. Update: we did a few labs using regex and I can definitely see how powerful it is. I still need to practice this. Its like solving a puzzle. 
+
+![Image](MoreVimShortCuts.PNG)
 
 ## 11.06.2024
 
