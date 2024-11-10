@@ -5,20 +5,39 @@
 ## 11.10.2024
 
 **Today's Topics**
-* LPI Linux Essentials (5.1 - X.X)
+* LPI Linux Essentials 
 
 
 ## 11.09.2024
 
 **Today's Topics**
-* LPI Linux Essentials (5.1 - X.X)
+* LPI Linux Essentials (5.1 - 5.4)
 
 
 ## 11.08.2024
 
 **Today's Topics**
-* LPI Linux Essentials (4.2 - X.X)
+* LPI Linux Essentials (4.2 - 4.4)
 
+Computer hardware reviw. Central Processing Unit (CPU) - processes computer functios and performs calculations. Random Access Memory (RAM) - high-performance, volatile storage. Secondard storage (Hard drive) - persistent storage for data not currently in use. Network Interface Card (NIC) - permits connections to network. Then input and output devices like mouses, keyboards, and monitors. 
+
+Hardware drivers reside in the running kernel (or are loaded as a module) and enable the operating system to use the hardware. 
+
+`/boot` contains the boot loader configuration files and parameters. `/etc` contains many useful directors including `/fstab` for partition mount points, `/passwd` for local user attributes, `/group` for groups, and `/hosts` for IP addresses and hostnames. 
+
+All processes have a process ID or a PID. You can find process data by going to `/proc/<PID>/`. You can view the running processes by using the commands `ps aux` and `ps -eF`. You can also use the command `top`. 
+
+System messages are messages from out kernel. They're sent from the kernel ring buffer. You use `dmesg` to see this information. The kernel ring buffer holds messages related to the operation of the kernel - a ring buffer is simply a buffer of a constant size. 
+
+Logging - common locations for system and application log data. You can get to the log directory via /var/log. The common logs are messages (general system logs and messages), syslog (for Debian-based systems), auth.log (authentication logs), secure (for Red Hat-based systems), boot.log (system boot logs), cron.log (Cron job logs), kern.log (Kernel logs), and faillog (authentication failure logs). 
+
+Cron is kind of a like a task scheduler. Seems pretty powerful. 
+
+Now for the good stuff. Networking. You can use `ip addr show` to see your device's IP address. You can also use the `dig` command to get DNS information for a resource. 
+
+You can use `ip route show` to see the route table. I think it just shows you what your default gateway is (in the first line) and it shows the subnet that you're on. It also says the device that's the next hop. 
+
+Instead of `ifconfig`, start to get familiar with `nmcli`. You can also use `netstat` and `ss` to see what devices are on the network. 
 
 
 ## 11.07.2024
