@@ -13,6 +13,14 @@
 **Today's Topics**
 * LPI Linux Essentials (5.1 - 5.4)
 
+`sudo` stands for super-user do. I'm getting really tired of these Linux command names. It's like they didn't even expect for people to ever truly use it in the future. 
+
+There are 7 user attribute fields: username, password, user ID, group ID, GECOS (long name), Home Directory, and Login Shell. The password is saved as a hash so you'll just see an 'x' for that. These are for human or standard users. There are different types of users other than root and standard. 
+
+![Image](UserAttributesField.PNG)
+
+System users are generally deployed when applications are installed, their home directories are set to application folders, and they normally do not have a login shell. The purpose of having discrete users is to separate functional privileges from other applications and services. 
+
 
 ## 11.08.2024
 
