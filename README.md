@@ -2,11 +2,18 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.11.2024
+
+**Today's Topics**
+* LPI Linux Essentials (labs)
+
+
 ## 11.10.2024
 
 **Today's Topics**
-* LPI Linux Essentials 
+* LPI Linux Essentials (labs)
 
+`/usr ` stands for Unix System Resources. And remember, `/bin`/ and `/sbin/ stands for binary and system binaries. 
 
 ## 11.09.2024
 
