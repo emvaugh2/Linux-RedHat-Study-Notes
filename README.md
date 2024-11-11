@@ -8,12 +8,22 @@
 * LPI Linux Essentials (labs)
 
 
+
+
 ## 11.10.2024
 
 **Today's Topics**
 * LPI Linux Essentials (labs)
 
-`/usr ` stands for Unix System Resources. And remember, `/bin`/ and `/sbin/ stands for binary and system binaries. 
+`/usr ` stands for Unix System Resources. And remember, `/bin`/ and `/sbin/` stands for binary and system binaries. 
+
+`df` stands for disk free. Use this to see how much storage you have available. You can also find the number of CPUs and their speed in the /proc/cpuinfo directory. You can see how much RAM is installed in the /proc/meminfo directory. You can see the swap memory being used by using the `free -m` command. Lastly, you can see the BIOS version using the `dmidecode` command. 
+
+Use `ps aux` to see which processes are being ran. Use the `uptime` command to see the current system load. 
+
+You can use the command `cat /etc/resolv.conf | grep nameserver` to find your DNS server. Remember, you can find your IP, MAC and DG using the `ip addr show` and `ip route show` commands. 
+
+
 
 ## 11.09.2024
 
@@ -24,7 +34,7 @@
 
 There are 7 user attribute fields: username, password, user ID, group ID, GECOS (long name), Home Directory, and Login Shell. The password is saved as a hash so you'll just see an 'x' for that. These are for human or standard users. There are different types of users other than root and standard. 
 
-![Image](UserAttributesField.PNG)
+![Image](UserAttributeFields.png)
 
 System users are generally deployed when applications are installed, their home directories are set to application folders, and they normally do not have a login shell. The purpose of having discrete users is to separate functional privileges from other applications and services. 
 
