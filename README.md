@@ -2,10 +2,17 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.13.2024
+
+**Today's Topics**
+* Linux User Management Deep Dive (continued)
+
 ## 11.12.2024
 
 **Today's Topics**
-* LPI Linux Essentials (labs)
+* Linux User Management Deep Dive
+
+
 
 
 ## 11.11.2024
