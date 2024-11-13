@@ -2,11 +2,26 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.12.2024
+
+**Today's Topics**
+* LPI Linux Essentials (labs)
+
+
 ## 11.11.2024
 
 **Today's Topics**
 * LPI Linux Essentials (labs)
 
+You can find which groups a user belongs to by navigating to the `/etc/group` file. Cat the file and grep out the user you're looking for. The information will be there. You can also use `groups <user_name>` to also find this information. 
+
+To find a user's home directory, you can use the following two commands: `getent passwd <user_name>` and `cat /etc/passwd | grep <user_name>`.
+
+Lets add some users and groups now. To add a user, just use `useradd <user_name>`. To add a group, just use `groupadd <group_name>`. To add a user to that group, use `usermod --append --groups <group_name> <user_name>`. Easy. 
+
+Use the following command to change the OWNERSHIP (not file permissions) of a file or directory: `chown -R (new_user_owner>:<new_group_owner> <file or directory name>`
+
+Use the following command to change the file/directory PERMISSIONS: `chmod <u (user) or g (group) + <w,r,x,> <file or directory name>`. For example, `chmod g+rx /home/susan`
 
 
 
