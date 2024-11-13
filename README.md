@@ -5,14 +5,31 @@
 ## 11.13.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (continued)
+* Linux User Management Deep Dive (Chapter 3)
+
+/etc/login.dev file is where you can set the default parameters for the UID_MIN, MAX, Group MIN, MAX, and other fields for your users and groups. 
+
+When you create a user, Linux also creates a group for that user with the same name as the user. Just be aware of this. 
+
 
 ## 11.12.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive
+* Linux User Management Deep Dive (Chapter 1 - 2)
 
+UID (User Idenifier) Ranges
+- UID 0 - superuser or root user.
+- UID 1-200 - system users. ID range for system users for system processes. These are statically assigned by the system
+- UID 201-999 - system users. ID range given to system users for system processes but dont know files on the system. These are dynamically assigned when the packages that require them are installed. These user IDs have restricted access only to the resources they need for operating
+- UID 1000+ - regular users. ID range assigned for all regular users.
 
+Use the `id` and `groups` command to see the user and group that you belong to. You can be in a primary group and a secondary group. You can find all of this user and group information in the /etc/ directory. 
+
+A shell is a program that acts as an interface between the user and the OS kernel. A shell is created for each user once their profile has been created. It's usually /bin/bash which is for Bash. If you set a user shell to /sbin/nologin: and they try to log in, they'll receive the message "This account is currently not available." You have to create the file /etc/nologin.txt first though. If you use /bin/false:, then this will also automatically log a user out. 
+
+Home Directory - the directory in which a user enters upon login. Also, keep in mind. If you copy files over to another user's file system or directory, you would also need to change the file permissions over to the new user. 
+
+Just a reminder, if you see the /etc/passwd output, the format is. user:password:userid:groupid:GEKOS:HomeDirectory:LoginShell. You can see the actual password by going to the /etc/shadow but only the root user can see this. You can also see password management information here. It's about 8 fields. The password for groups is set in the /etc/gshadow file. The other fields in the group output are the group administrator and the members in the group (separated by commas). 
 
 
 ## 11.11.2024
