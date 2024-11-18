@@ -20,11 +20,34 @@
 **Today's Topics**
 * Linux User Management Deep Dive (Chapter 5)
 
+So it seems like you edit the `visudo` file to change sudo permissions for your system. You can assign users root-level access if you want. I believe that's what's happening. Will check with Chat GPT. visudo also runs a syntax check before saving the file. Or running the file. 
+"Sudoers allows particular users to run various commands as the root user, without needing the root password."
+
+`ALL=(ALL)      ALL`. Lets break this down. The first all indicates which hosts that a user can run commands on. This is the person making the commands. The second ALL is for the target user. The last ALL indicates the commands that can be run. So you can run all commands. I still don't understand the second ALL completely.  
+
+Before you remove a user, make sure you find the files, directories, and processes before you do so. Use `ps U <user_name>` to see which processes are being completely by a user. Check the `man` pages for all the options. Then, you can do `kill <PID>` to terminate the process. Use `find / -user <user_name>` to find the files and directories associated with a user. 
+
+With `chmod`, you can load up the users and groups. You can do `chmd og+rw <file_name>`. Look into the instructions. It will definitely make this entire process easier. 
+
+Set UID (SUID), Set GID (SGID), and sticky bit. The SUID executes a file as the owner of the file and not the user running the command. So like, the root user can run the command but the system will see it as the owner of the file (user1) actually running the file. Sticky bit allows for a user to only edit files or directories that they created. 
+
+A file mask is the maximum amount of settings a file or directory can have when created. You can see this when you use the `umask` command. The number of maximum permissions overall is 777. The default function when creating folders is 777 and for files are 666. `umask` returns 4 digits. The first digit is for special permissions. The next 3 are owner, group, and other. Whatever this digit is, you subtract it from 7 to get what the default permissions will be when you create a file or folder. 
+
 
 ## 11.15.2024
 
 **Today's Topics**
 * Linux User Management Deep Dive (Chapter 4)
+
+Lets look into the fields for /etc/shadow. username:<hashed password with salt>:last password change (in days):minium number of days required between password changes (set to 0 for password change at any time):the maximum number of days the password is valid:the number of days before a warning message about changing your password is sent:the number of days until an account will auto-disable:the number of days that an account has been disabled
+
+All of these fields can be changed via `passwd`. Look at the options. 
+
+(You can actually tell which hashing algorithm is used (like SHA-256) by looking at the first number of the hashed password. They're separated by the $ signs.)
+
+Use `chage -l <user_name>` to see all of the password attributes for a user. You can also see the options using `chage -h`. This is all good for password management. It's like AD but just not as pretty. 
+
+If you lock a user's password, they can no longer use that password but they can still access a server in different ways where the password isn't required. If you disable a user's account, they can't use that account. Just be familiar with differences for security reasons. 
 
 
 ## 11.14.2024
