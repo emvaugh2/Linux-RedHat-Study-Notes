@@ -6,31 +6,52 @@
 ## 11.18.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (Chapter X)
+* Introduction to Databases on Linux (Chapter X)
 
 
 ## 11.17.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (Chapter X)
+* Introduction to Databases on Linux (Chapter X)
 
 
 ## 11.16.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (Chapter X)
+* Linux User Management Deep Dive (Chapter 5)
 
 
 ## 11.15.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (Chapter X)
+* Linux User Management Deep Dive (Chapter 4)
 
 
 ## 11.14.2024
 
 **Today's Topics**
-* Linux User Management Deep Dive (Chapter X)
+* Linux User Management Deep Dive (Chapter 3 continued)
+
+We remove a user using the `userdel` command. You should remove the files and processes related to the user before you do this though. You can use the `find` command to search for anything else the user has a hand in. 
+
+Use the `groupadd` option. You can use the additional options to get very specific about how to add groups. You can automatically assign a group a Group ID. This is good for automation and simplification with typos just in case user group naming conventions get out of hand. You can also add a user and give them a primary and secondary group all in one command. Get familiar with these commands. 
+
+You can modify groups using `groupmod`. You can change the GID and the name of the group using this command. Always check the `man` output for these commands. Also, use `groupdel` to delete groups. 
+
+`gpasswd` is used to administer /etcgroup and /etc/gshadow. Use it to set group passwords and the users who are able to use this password. 
+
+`pwck` verifies the integrity of the users and authentication information. It also checks the etc/shadow file. Basically it makes sure your password isn't corrupted. 
+
+`grpck` does the same thing just for groups. Be careful. These commands can delete users if it finds corrupted files. 
+
+Now we have `pwconv` and `grpconv` commands. They create shadow from the passwd commands. Apparently we won't be using this much so I'll save my bandwidth until I need to come back to this. 
+
+You can use the `id` command followed by the username to see the user's ID, primary, and secondary group. 
+
+I'm piecing together a connection for the chmod and chown. When you do `ll` and see the file permissions for user, group and everybody else, I'm assuming you need to change this first before you give a group permission over a file. If the user or group doesn't own the file, there's no point in giving them permission over the file because I would assume it shouldn't work. So always check the permissions on the file first, transfer ownership to the correct user, and then give that user or group the correct permissions over the file. Use `chown` for transferring ownership and use `chmod` for changing permissions. Remember, the `o` flag is for user and tthe `g` flag is for group. Then you can simply put r, w, or x to change the permissions. You can also use the numbers. We'll practice both ways. 
+
+
+
 
 
 ## 11.13.2024
