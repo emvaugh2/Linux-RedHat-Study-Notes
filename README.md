@@ -13,6 +13,22 @@
 **Today's Topics**
 * Introduction to Databases on Linux (Chapters 3 - 5)
 
+Relational databases were created in the 1970s. SQL - structured query language. Used to manipulate databases. It's an ANSI/ISO standard. Common commands are Select, Update, Insert Into, Delete, Create, Drop, and Alter. 
+
+PostgreSQL - highly extendible RDBMS, with support for many extensions and stored procedure languages. It supports connections using TCP/IP and local UNIX sockets. 
+
+MariaDB - hihgly flexible RDBMS with support for multiple storage engines. It was forked from MySQL when it was purchased by Oracle. Interesting. 
+
+CouchDB - an open-source, distributed (shared-nothing architecture) multi-model NoSQL document-oriented database. Whatever that means. 
+
+MongoDB - a document database designed for ease of development and scaling. 
+
+Apache Cassandra - an open source, distributed NoSQL database. 
+
+Distributed DBs are just high availability infrastructure so think of it like that. + DBs are closer to the user for lower latency. 
+
+That wraps up databases! I still don't necessarily know what's going on but I get the foundation of it. I'm going to leave DBs alone until I really need it. On to the LPIC-1 course. 
+
 
 ## 11.17.2024
 
