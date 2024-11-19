@@ -2,6 +2,11 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.19.2024
+
+**Today's Topics**
+* Introduction to Databases on Linux (Chapter X)
+
 
 ## 11.18.2024
 
@@ -32,6 +37,8 @@ With `chmod`, you can load up the users and groups. You can do `chmd og+rw <file
 Set UID (SUID), Set GID (SGID), and sticky bit. The SUID executes a file as the owner of the file and not the user running the command. So like, the root user can run the command but the system will see it as the owner of the file (user1) actually running the file. Sticky bit allows for a user to only edit files or directories that they created. 
 
 A file mask is the maximum amount of settings a file or directory can have when created. You can see this when you use the `umask` command. The number of maximum permissions overall is 777. The default function when creating folders is 777 and for files are 666. `umask` returns 4 digits. The first digit is for special permissions. The next 3 are owner, group, and other. Whatever this digit is, you subtract it from 7 to get what the default permissions will be when you create a file or folder. 
+
+I'll have to return to the quotas. That was a bit confusing. 
 
 
 ## 11.15.2024
