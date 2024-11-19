@@ -5,7 +5,9 @@
 ## 11.19.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: Chapter (X)
+* LPIC-1 - Exam 101: (Chapter 1)
+
+
 
 
 ## 11.18.2024
