@@ -5,19 +5,37 @@
 ## 11.19.2024
 
 **Today's Topics**
-* Introduction to Databases on Linux (Chapter X)
+* LPIC-1 - Exam 101: Chapter (X)
 
 
 ## 11.18.2024
 
 **Today's Topics**
-* Introduction to Databases on Linux (Chapter X)
+* Introduction to Databases on Linux (Chapters 3 - 5)
 
 
 ## 11.17.2024
 
 **Today's Topics**
-* Introduction to Databases on Linux (Chapter X)
+* Introduction to Databases on Linux (Chapters 1 - 2)
+
+A databse is an organized collection of data. The first database was a physical database on paper in 1890. Also, JSON format was created in 2001. 
+
+CSV - comma separated values. Never knew what this stood for. Basic Rules
+1.) Data is stored in fields/columns separated by the comma character.
+2.) Records/rows are terminated by newline character
+3.) A specific character encoding, byte order, or line terminator format, is not required.
+4.) All records should have the same number of fields, and be in the same order
+5.) Data within fields is interpreted as a sequence of characters, not as a sequence of bytes. 
+
+XML - eXtensible Markup Language. It's a markup language much like HTML. It was designed to store and transport data in a way that is both human and machine readable. 
+
+I'll be the first to say this course is not so great and I don't like it. Not nearly enough information has been given regarding these databases and the formatting is very weird. There are 10 labs. I'm going to complete them. 
+
+Well, I did just learn you can open Python on the CLI by just typing `Python`. You can also exit by pressing ctrl + D. This combo is similar to Ctrl + Z in the Cisco CLI. 
+
+So we did queries on Berkeley DB, CSV, XML, and JSON files. The easiest and most readable formats were CSV and JSON for me. I was able to do my own made up queries on JSON actually. Definitely easier to follow. 
+
 
 
 ## 11.16.2024
