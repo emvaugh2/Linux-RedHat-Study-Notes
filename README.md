@@ -7,6 +7,30 @@
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 1 continued)
 
+Lets talk about the Linux boot process. The computer starts and the BIOS on the motherboard checks out the input and output for all hardware devices. If everything works, the boot process can begin. The boot program (GRUB) will look for the section of the harddrive that contains the data needed to boot an OS. This boot loader will then load the Kernel. The kernel will then load an initial RAM disk. Then, the kernel starts off the initialization system. This loads the services and eventually discards the initial RAM disk. 
+
+You can see boot logs using `dmesg` (the traditional utility used for viewing the kernel ring buffer) and `journalctl -k` (systemd utility to view the kernal ring buffer within the systemd journal). 
+
+Init is short for initialization. After the Linux kernel loads up and brings in the initial RAM disk, it seeks out an initialization system to hand over control of the computer. It's going to look at /sbin/init first. The kernel will start it once it locates it. Then the init program is in control. It will first look at the /etc/inittab file for configurations. It will look for a Runlevel. What's a runlevel? A runlevel is a predefined configuration that the computer will operate within. It's 7 runlevels from 0 to 6. 
+
+Each line in the `inittab` file has a few fields: <identifier>:<runlevel>:<action>:<process>. I will definitely be rewatching all of these videos. 
+
+`upstart` is like `init` but it offers asynchronous starting of services which can decrease boot up times. It can work on real-time events. 
+
+A change on a Linux system is an event. An event triggers a job. Jobs can be in two categories: Tasks and Services. 
+
+A Task will do what is requested of it and then return to a waiting state after it's finished. A Service will continue to run unless a daemon stops it or the system admin kills the process. 
+
+Lets talk about `systemd`. Where did this come from? So `init` and `upstart` rely on Bash shell scripts to boot up your computer. The issue with this is the script files create additional processes and have to open Bash libraries in order to run all the scripts. This uses unnecessary resources and slows down the boot time. `systemd` replaced these Bash script files with compiled C code which runs faster. Requires less resources. `systemd` uses Unit Files to boot You can find the unit files in /etc/systemd/system. To see all the unit files on a system, use the command `systemctl list-unit-files`. 
+
+Here are the components of the Unit File. 
+- [Unit]
+- Description=<describes the system>
+- Documentation: <this is where you put the documentation for this unit file>
+- Requires=<lists out the unit files that will be activated when this unit is activated>
+- Conflicts=<indicates what units can NOT be running while this one is running>
+- After=<says whatever is listed here must be started before the unit that this file is for will be started>
+
 
 ## 11.19.2024
 
