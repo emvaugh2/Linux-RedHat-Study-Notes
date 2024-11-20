@@ -2,13 +2,24 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.20.2024
+
+**Today's Topics**
+* LPIC-1 - Exam 101: (Chapter 1 continued)
+
+
 ## 11.19.2024
 
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 1)
 
+A regular file system is a method of laying out files and folders on a physical hard disk. A pseudo file system does not exist on a physical hard disk. It's also not persistent because it only exists in RAM. `/proc` and `/sys` directories are pseudo file systems. 
 
+`/proc/` contains information about the processes running on a system. You can see them by PID. `/sys` contains information about the system's hardware and kernel modules. 
 
+`uname` stands for Unix name. Use this to display information about currently running kernel. `lsmod` displays a listing of all currently loaded kernel modules. `modinfo` displays information about a specified kernel module. `modprobe` command used to dynamically load and unload kernel modules at runtime. 
+
+A few commands that could be useful for listing specific devices: `lspci` (for PCI devices), `lsusb` (for USB devices), `lscpu` (for CPU processs info), and `lsblk` (for all block devices (think external harddrives)). 
 
 ## 11.18.2024
 
