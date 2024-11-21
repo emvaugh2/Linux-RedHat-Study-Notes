@@ -7,6 +7,15 @@
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 2)
 
+`/opt` directory is for optional devices. A mount point is when you take a partition or disk and mount it to a directory. 
+
+Logical Volume Manager (LVM) - allows the creation of 'groups' of disks or partitions that can be assembled into a single (or multiple) filesystems. Think of this like an underlay-overlay situation with hard drives/block devices. You can have multiple, physical devices (like an underlay) and you can group those together into a logical file system (overlay) and use that logical system however you see fit. Use the commands `pvs`, `vgs`, and `lvs` to list out the physical volumes, volume groups, and logical volumes, respectively. 
+
+
+
+
+
+
 
 ## 11.20.2024
 
@@ -36,6 +45,26 @@ Here are the components of the Unit File.
 - Requires=<lists out the unit files that will be activated when this unit is activated>
 - Conflicts=<indicates what units can NOT be running while this one is running>
 - After=<says whatever is listed here must be started before the unit that this file is for will be started>
+
+Use the command `runlevel` command to see what runlevel you're at. Use `telinit` to change your runlevel but you must be the root user. 
+
+Why do we need runlevels? Basically runlevels are like, minimum levels of requirement for your device to operate it. If you're working on a server, you may only need to have one user and other programs that use the device. So you may only need a multi-user run level with or without networking. If you're doing specifically maintenance and don't need any type of network services or tools, you can use a lower runlevel. This can save time and resources for when your device is starting. You may not ever need to use a GUI so why even have your device start up those services? You may not need the network so why start those processes? Your runlevel determines what you need and don't need. 
+
+A target is a unit that syncs up with other units when the computer boots or changes states. They are used to bring the system to a new state. Other units associate themselves with a target for an operating environment. 
+
+multi-user.target - multi-user system, similar to what runlevel 3 provides. 
+graphical.target - multi-user system with a desktop environment, similar to what runlevel 5 provides.
+rescue.target - pulls in a basic system and file system mounts and provides a rescue shell.
+basic.target - basic system, used during the boot process before another target takes over.
+sysint.target - system initilization.
+
+Useful command: `systemctl list-unit-files -t target` - show all unit files for available targets. 
+
+There are multiple ways to reboot and shutdown your system. Simple ways are `reboot` and `poweroff`, respectively. You also have the `wall` command that broadcasts a message to all logged in users. `acpid` is Advanced Configuration and Power Interface and it registers system events. 
+
+
+
+
 
 
 ## 11.19.2024
