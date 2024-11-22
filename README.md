@@ -5,7 +5,11 @@
 ## 11.22.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 2 continued)
+* LPIC-1 - Exam 101: (Chapter 2)
+
+Long week so no notes although I did watch all the videos for Chapter 2. I'm familiar enough with yum, rpm, apt-get, and dpkg so if things get specific, I can google what I need. The notes that I will be filling in later are related to the boot loading process and the differences between MBR and GPT. I'm not familiar with boot loading at all whether thats Windows, Linux or even Cisco so I want to rewatch those videos. 
+
+Also, containers made more sense when the instructor talked about it. Learning the basics of Linux is making it make more sense. 
 
 
 ## 11.21.2024
