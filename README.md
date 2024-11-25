@@ -2,6 +2,11 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.25.2024
+
+**Today's Topics**
+* LPIC-1 - Exam 101: (Chapter 2)
+
 ## 11.24.2024
 
 **Today's Topics**
@@ -11,7 +16,9 @@
 ## 11.23.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 2)
+* LPIC-1 - Exam 101: (Chapter 3)
+
+More useful CLI commands: `sort`, `uniq`, and `tr`. 
 
 
 ## 11.22.2024
