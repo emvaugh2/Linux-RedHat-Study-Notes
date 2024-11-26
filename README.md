@@ -2,10 +2,27 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+
+## 11.27.2024
+
+**Today's Topics**
+* LPIC-1 - Exam 101: (Chapter 4 continued)
+
+
 ## 11.26.2024
 
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 4)
+
+Block devices -> "sda" means the "s" is for SCSI or SATA. "d" is for disk. "a" is for the first block devices like this. "vda" is similar but the "v' is for virtual. 
+
+Quick review, `lsblk` is to list the block devices. `fdisk` is to create partitions of the MBR type. This is legacy. `parted` is for modern partition making for either MBR or GPT. 
+
+Linux File Systems. We have two different types: non-journaling (ext2 - legacy) and journaling (ext3, ext4, and XFS). We also have btrfs, FAT (file allocation table), exFAT (extended FAT), etc. 
+
+Use `blkid` to see the file systems universally unique identifier. USe `mkfs` to create a new file system on a partition. 
+
+Another reminder, use `df` and `du` to see the disk free and disk use stats. Use the `-h` option to make it human-readable. 
 
 
 ## 11.25.2024
