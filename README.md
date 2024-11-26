@@ -5,12 +5,12 @@
 ## 11.25.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 2)
+* LPIC-1 - Exam 101: (Chapter 3)
 
 ## 11.24.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 2)
+* LPIC-1 - Exam 101: (Chapter 3)
 
 
 ## 11.23.2024
@@ -19,6 +19,14 @@
 * LPIC-1 - Exam 101: (Chapter 3)
 
 More useful CLI commands: `sort`, `uniq`, and `tr`. 
+
+`sed` - stream editor command. Used for a variety of tasks commonly utilitzed to alter text in a file or search and replace words. Think of this as the Replace function in the Notepad+ app. 
+
+`split` - used to split a file ip into individual pieces. By default, each piece of the file contains up to 1,000 lines, but this can be changed to a different value or file size. I'm not sure why we would need this. 
+
+You can use the `mv` command to rename a file. Keep this in mind. 
+
+Use the command `file` to see a file's type. 
 
 
 ## 11.22.2024
