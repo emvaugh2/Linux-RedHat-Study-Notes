@@ -2,15 +2,37 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 11.26.2024
+
+**Today's Topics**
+* LPIC-1 - Exam 101: (Chapter 4)
+
+
 ## 11.25.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 3)
+* LPIC-1 - Exam 101: (Chapter 3 continued)
+
+Processes have priority levels called nice levels. The highest priority is -20. The lowest is 19. Most processes have a nice level of 0 by default. You can use the `renice` command to change the nice level of a process. Each process uses CPU time so you don't want to overly tax your resources on unnecessary processes. 
+
+A lot of this is review. This may be the third time going through all of this. No, Im not an expert on it but I understand the overall structure of what's happening. So I'm not taking a bunch of notes. I'm noticing there are a few different ways to get the same end result though so that's cool but also overwhelming 
+
 
 ## 11.24.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 3)
+* LPIC-1 - Exam 101: (Chapter 3 continued)
+
+Use the `./` notation to tell Linux to run an executable from the current directory you're in. 
+
+`dd` command copies and converts files. Often used to create files of arbitrary size and to back up disk drives. You're familiar enough with `tar`, `gzip`, and `gunzip` for zipping up folders and compressing them. Remember, `tar` doesn't compress the file. It just zips it. 
+
+You can use the `find` command to help you search for files. Use the option `-name` to find a file based on their name. You'll have to input the name of the file obviously. You can also use the `empty` option to find empty files or directories. 
+
+Lets review file globbing: `*` matches zero or more characters. `?` matches any single character. `[abc]` matches any one of the characters in the list, case sensitive. `[^abc]` matches any one character except those in the list, case sensitive. `[0-9]` matches a range of numbers. 
+
+Remember, use `ps` and `top` to see information on your processes. Use the following commands for process management: `uptime`, `free` (view the used and available memory and swap space), `pgrep` (find process information based on process name), `kill` (based on PID), and `pkill` (based on process name). 
+
 
 
 ## 11.23.2024
@@ -32,7 +54,7 @@ Use the command `file` to see a file's type.
 ## 11.22.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 101: (Chapter 2)
+* LPIC-1 - Exam 101: (Chapter 2 continued)
 
 Long week so no notes although I did watch all the videos for Chapter 2. I'm familiar enough with yum, rpm, apt-get, and dpkg so if things get specific, I can google what I need. The notes that I will be filling in later are related to the boot loading process and the differences between MBR and GPT. I'm not familiar with boot loading at all whether thats Windows, Linux or even Cisco so I want to rewatch those videos. 
 
