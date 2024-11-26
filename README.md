@@ -8,6 +8,8 @@
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 4 continued)
 
+Completed the rest of the labs Exam 101. I'll finish the videos in the morning. Things are starting to make sense or at the very least, I'm starting to see how things are supposed to be set up in the default way. And many of these simple commands like `chmod`, `chown`, `mkdir`, `grep` and etc are getting easier to use. I still am quite lost when it comes to the flags because I'm not familiar with which options will help me out the most but I'll start to navigate that soon. 
+
 
 ## 11.26.2024
 
