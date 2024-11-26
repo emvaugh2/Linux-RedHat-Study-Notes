@@ -24,6 +24,8 @@ Use `blkid` to see the file systems universally unique identifier. USe `mkfs` to
 
 Another reminder, use `df` and `du` to see the disk free and disk use stats. Use the `-h` option to make it human-readable. 
 
+Use `fsck` to check the file system for any issues. This is for maintenance. You can also use `e2fsck` for specifically ext type file systems. 
+
 
 ## 11.25.2024
 
