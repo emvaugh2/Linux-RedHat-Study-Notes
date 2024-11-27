@@ -3,12 +3,24 @@
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
 
+## 11.28.2024
+
+**Today's Topics**
+* LPIC-1 - Exam 101: (Chapter 5)
+
+
 ## 11.27.2024
 
 **Today's Topics**
 * LPIC-1 - Exam 101: (Chapter 4 continued)
 
 Completed the rest of the labs Exam 101. I'll finish the videos in the morning. Things are starting to make sense or at the very least, I'm starting to see how things are supposed to be set up in the default way. And many of these simple commands like `chmod`, `chown`, `mkdir`, `grep` and etc are getting easier to use. I still am quite lost when it comes to the flags because I'm not familiar with which options will help me out the most but I'll start to navigate that soon. 
+
+Look at each directory as a docking port for ships. Look at the partitions/hard drives for each block/storage device as a ship. The ship just visits the docking port and then it leaves. This is basically how mounting works. You mount (visit) the hard drive to the directory (docking port) and then once you're done and loaded all your cargo (saved files and things), you unmount the hard drive (leave the docking port) at the end of the day. Now, obviously sometimes you want persistent storage so thats you keeping your drive mounted even after rebooting but this is the overall process of mounting. 
+
+Use `mount` and `umount` for mounting and unmounting. 
+
+You can use `umask` to see the default permissions set for your files and directories for both the current user and the root user. You'll just have to subtract your `umask` output from 777. To see where all of these default settings are stored, go to `/etc/bashrc` where you can also modify these settings. 
 
 
 ## 11.26.2024
