@@ -7,6 +7,12 @@
 **Today's Topics**
 * LPIC-1 - Exam 102: (Chapter 9 - 10)
 
+Linux has a `tracepath` command that uses UDP instead of ICMP. Also, with ping, Linux will by default keeping sending pings unless you do Ctrl + C. You can use the options to send only a specific amount of pings (you're familiar with 4 packets). You can also do the -T option that will send TCP packets to your destination which will use Port 80 by default. 
+
+The `ss` command (socket statistics) is the modern version of `netstat`. Keep this in mind. 
+
+
+
 
 ## 11.29.2024
 
