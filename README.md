@@ -5,14 +5,37 @@
 ## 11.29.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 102: (Chapter 5)
+* LPIC-1 - Exam 102: (Chapter 6 - 8)
 
+We're going over X11 and X.org which provides graphical rendering for UNIX type OSs. I've never heard of this before. `libDRM` is direct rendering manager. 
+
+You can use `cron` and `at` to set up specific "jobs" or services to run at a specified time. This can be reoccuring (cron) or one time (at and also cron). Seems pretty useful for system management and sending process metrics to softwares like Grafana and stuff. 
+
+Keep in mind you can change the language of your distro if you want to do that. You can alter the time and date of your system too. 
+
+Use NTP and their set of commands for anything time and date related. You're pretty familiar with NTP so don't worry about this too much. For modern distros, I believe they use `chronyd` for these NTP options. This is different from `cron` fyi. 
+
+`rsyslog` manages all the log files for systems not using `systemd`. 
+
+The systemd journal stores all kinds of log messages across your system. So see the information here, use the command `journalctl`. 
+
+The entries in `journalctl` are in a databse format. Don't let the output fool you. Use the option that will allow you to see it in it's field-value format. You can also reformat all of this into JSON. Keep that in mind. 
+
+Common Unix Printing System (CUPS) - use this for printing services. To access the WebUI, use http://localhost:631 . Remember, localhost is just your local computer. Im sure it has some type of loopback address. 
+
+I've never had to manage printers and print servers and I don't plan on doing it now lol. I'll do the CUPS lab but I won't be storing this info in my mind unless I know I'll need it in the future. 
 
 
 ## 11.28.2024
 
 **Today's Topics**
 * LPIC-1 - Exam 102: (Chapter 5)
+
+I'm pretty familiar with scripting so I'm just learning how Bash does it instead of MATLAB and Python. The OR logical operator is `||` and the AND logical operator is `&&`. 
+
+In Bash, you can compare integer values using `eq`, `ne`, `gt`, `lt`, `ge`, and `le`. That's equal, not equal, greater than, less than, greater than or equal to, and less than or equal to. 
+
+The `until` loop is the opposite of a `while` loop. It will repeat a loop until something is FALSE. A while loop repeat something until a condition is true. 
 
 
 
