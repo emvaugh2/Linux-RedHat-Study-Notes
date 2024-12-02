@@ -2,10 +2,17 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+
+## 12.01.2024
+
+**Today's Topics**
+* Linux Networking  (Chapter 6 - )
+
+
 ## 11.30.2024
 
 **Today's Topics**
-* LPIC-1 - Exam 102: (Chapter 9 - 10)
+* Linux Networking  (Chapter 1 - 6)
 
 Linux has a `tracepath` command that uses UDP instead of ICMP. Also, with ping, Linux will by default keeping sending pings unless you do Ctrl + C. You can use the options to send only a specific amount of pings (you're familiar with 4 packets). You can also do the -T option that will send TCP packets to your destination which will use Port 80 by default. 
 
