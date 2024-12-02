@@ -6,6 +6,34 @@
 ## 12.01.2024
 
 **Today's Topics**
+* Linux Networking  (Chapter 8 - )
+
+In Linux, you have netfiler which is a framework provided by the Linux kernel. It permits packet filtering, NAT, and PAT. 
+
+THe system-config-firewall interacs with the iptables.service which comes from the /sbin/iptables. These work with netfilter. "Host administratively prohibited" in Wireshark usually means the firewall blocked your traffic.
+
+Lets talk iptables. You have a FilterTable which is used to determine if a packet is permitted to continue or be denied. You have a NAT Table. You have a Mangle Table which is used for altering the IP headers of a packet in order to modify TTL, hops, etc. You have a Raw Table which is used for opting out of connection tracking. You then have a Security Table which is used for SELinux services. 
+
+You have 5 NetFiler hooks that correspond to the 5 iptables chains. 
+
+NF_IP_Pre_Routing > PreRouting - triggered by incoming traffic after entering the network stack and processed before routing decisions.
+NF_IP_Local_IN > Input - triggered after the incoming packet is routed if internal.
+NF_IP_Forward > Forward - triggered after the incoming packet is routed if remote (forwarded). 
+NF_IP_Local_Out > Output - triggered by local outbound traffic once it enters the network stack.
+NF_IP_Post_Routing > PostRouting - triggered by any outbound traffic, after routing prior to traversing medium. 
+
+This reminds me of pre-policies for prerouting. The forward rules looks like the fast-track status for FTD firewalls. The input looks like the normal policies in the FTD firewalls. All of this looks like the SNORT and LINA process that the Cisco firewalls go through and how which parts of bypassed. 
+
+You hae IPTable States: new - a new packet not associated with any existing connection. Established - established traffic. Related - packets associated with a connection already in the system but not an existing connection. Invalid - unroutable or unidentified packets no asssociated with an exisiting connection or suitable for a new connection. Untracked - packets set in the raw table chain to bypass connection tracking. SNAT - source modified by NAT. DNAT - destination modified by NAT. 
+
+
+
+
+
+
+## 12.01.2024
+
+**Today's Topics**
 * Linux Networking  (Chapter 6 - 7)
 
 So Linux supports port-channel/etherchannel. Just think port redundancy. They call it Teaming and Bonding. These are two ways to do it with pros and cons with each. The instructor suggests we default with Teaming instead of bonding. Teaming supports LACP support (think IEEE standard for port-channel) and it also uses NetworkManager. Bonding doesn't require teamd and it better suited for virtual environments but it looks harder to set up based on the video. When doing either or, make sure you bounce both the master and slave ports. Think of the master port/interface as the port-channel and the slave interfaces/ports as the seperate interfaces (GigabitEthernet 1/0/12 and GigabitEthernet 1/0/13 for example). Teaming has team runners. These runners are broadcast, round-robin, active-backup, loadbalance, and lacp. Most of these are self explanatory. 
