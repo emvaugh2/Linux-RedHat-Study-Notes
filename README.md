@@ -6,7 +6,7 @@
 ## 12.01.2024
 
 **Today's Topics**
-* Linux Networking  (Chapter 8 - )
+* Linux Networking  (Chapter 8 - 13)
 
 In Linux, you have netfiler which is a framework provided by the Linux kernel. It permits packet filtering, NAT, and PAT. 
 
@@ -25,6 +25,20 @@ NF_IP_Post_Routing > PostRouting - triggered by any outbound traffic, after rout
 This reminds me of pre-policies for prerouting. The forward rules looks like the fast-track status for FTD firewalls. The input looks like the normal policies in the FTD firewalls. All of this looks like the SNORT and LINA process that the Cisco firewalls go through and how which parts of bypassed. 
 
 You hae IPTable States: new - a new packet not associated with any existing connection. Established - established traffic. Related - packets associated with a connection already in the system but not an existing connection. Invalid - unroutable or unidentified packets no asssociated with an exisiting connection or suitable for a new connection. Untracked - packets set in the raw table chain to bypass connection tracking. SNAT - source modified by NAT. DNAT - destination modified by NAT. 
+
+Firewalld has zones: drop, block, public, external, dmz, work, home, internal, and trusted. 
+
+Chat GPT chimed in. Real quick:
+iptables: Older, manual, rule-based.
+firewalld: Modern, dynamic, zone-based.
+Both are firewalls. 
+
+Testing at each OSI Layer: L2 - arping. L3 - ping, traceroute, tracepath. L4 - ss, telnet, tcpdump. L5-7 - dig, service tools. 
+
+Telnet will let you test again any port. It's more useful than ping. You just have to specify the port. I didn't know you could do that. I guess this is why we use test-network connection in PowerShell. 
+
+You can use ncat to see if a device can connect to your server on your chosen port as well. TCPdump does a similar thing. 
+
 
 
 
