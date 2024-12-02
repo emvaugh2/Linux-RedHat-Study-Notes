@@ -1,4 +1,4 @@
-# Linux Red Hat Study Notes
+                                    # Linux Red Hat Study Notes
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
@@ -6,7 +6,7 @@
 ## 12.01.2024
 
 **Today's Topics**
-* Linux Networking  (Chapter 6 - )
+* Linux Networking  (Chapter 6 - 7)
 
 So Linux supports port-channel/etherchannel. Just think port redundancy. They call it Teaming and Bonding. These are two ways to do it with pros and cons with each. The instructor suggests we default with Teaming instead of bonding. Teaming supports LACP support (think IEEE standard for port-channel) and it also uses NetworkManager. Bonding doesn't require teamd and it better suited for virtual environments but it looks harder to set up based on the video. When doing either or, make sure you bounce both the master and slave ports. Think of the master port/interface as the port-channel and the slave interfaces/ports as the seperate interfaces (GigabitEthernet 1/0/12 and GigabitEthernet 1/0/13 for example). Teaming has team runners. These runners are broadcast, round-robin, active-backup, loadbalance, and lacp. Most of these are self explanatory. 
 
