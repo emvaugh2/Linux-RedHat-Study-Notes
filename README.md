@@ -8,6 +8,14 @@
 **Today's Topics**
 * Linux Networking  (Chapter 6 - )
 
+So Linux supports port-channel/etherchannel. Just think port redundancy. They call it Teaming and Bonding. These are two ways to do it with pros and cons with each. The instructor suggests we default with Teaming instead of bonding. Teaming supports LACP support (think IEEE standard for port-channel) and it also uses NetworkManager. Bonding doesn't require teamd and it better suited for virtual environments but it looks harder to set up based on the video. When doing either or, make sure you bounce both the master and slave ports. Think of the master port/interface as the port-channel and the slave interfaces/ports as the seperate interfaces (GigabitEthernet 1/0/12 and GigabitEthernet 1/0/13 for example). Teaming has team runners. These runners are broadcast, round-robin, active-backup, loadbalance, and lacp. Most of these are self explanatory. 
+
+Teaming also has link watchers which are ethtool (watches for link state changes), arp_ping (monitors the ARP table), and nsna_ping (for IPv6 so ignore). Lets leave this here. I'll have more comments once I run through the labs. 
+
+You can also use `route -n` to see the route table. This looks cleaner to me. You can add static routes using `ip route add <subnet information>`. You can also block routes by using `ip route add prohibit <subnet info>`. 
+
+
+
 
 ## 11.30.2024
 
