@@ -5,7 +5,24 @@
 ## 12.03.2024
 
 **Today's Topics**
-* Linux Networking  (Chapter 13 - 5)
+* Linux Networking  (Chapter 13 - 15)
+
+We went over SNORT and OpenVPN configurations. I'm going to do the labs and come back to the notes. The videos were a little difficult to follow since we didn't have an outline beforehand. Today is definitely going to be a lab day. I need to finish the LPIC labs and get started on the Networking labs which I believe I'll be documenting. 
+
+Back to the LPIC 102 labs, we made an alias for the `systemctl status httpd.servce` command. We just named it webstat and used a "variable" so pass the command based on which service we wanted to see. We put all of these aliases in the .bashrc file. The .bashrc file will run these scripts when you log into your distro I believe. With that being said, if you make any changes to the .bashrc file, you'll have to source it (basically reload the file) using `. .bashrc` so that you can use the edited commands. Keep this in mind. The "rc' stands for run commands or resource configuration. The "." at the beginning of the file denotes that this file is hidden. Just in case you want the syntax breakdown. 
+
+Next lab, we created a directory in the root file directory, added four users to a group, and made that group the owner of the file. This was pretty straightforward. Sometimes I have to really keep using `pwd` and `ls` to see what directory I'm in and what files are available for me. But I know I should be checking the group and passwd directories to get more information on specific users. I'm also getting a lot more familiar with the `chmod` and `chown` commands although I did end up using the man page for one of them. Just to double check. Pretty straightforward lab. 
+
+Okay we worked with some systemd service files with timer units. I just followed the instructions but I'll post what I learned. When working with `systemd`, your files should end in .service although it can be assumed. Add the .service onto the end of your files for your own sanity. Also, you use `systemctl` to tell `systemd` what to do. `systemd` (I believe the d is for daemon) actually runs the processes but you use `systemctl` to tell it what it what to do. Think of `systemctl` as the command line tool or the dashboard to interact with systemd. If you use `vi <file_name>` on a file that doesn't exist, `vi` will create the file for you. Useful if you don't want to type `touch` beforehand. We also placed the script file in the /usr/local/sbin directory because that is a part of your $PATH variable where your system will look for executables. This is so you won't have to specify the path or append the path to the $PATH variable. Also, we plced the .service and .timer files in the /etc/systemd/system directory because this is where systemd looks for unit files. Very insightful lab. S/o Chat GPT for clearing up a bunch of things but everything is making more sense with the unit files, `systemd` and `systemctl` stuff. 
+
+For our 4th lab, we used the `journalctl` command to find out why our httpd.service file wasn't running. So we used the systemctl commands to start the file but it wasn't working. After using `journalctl -u httpd.service` (the -u flag is for unit files I believed based on my reading of the man pages), we found that the httpd.conf file didn't exist. So we copied the backup file over to the correct directory and renamed it to httpd.conf. Then, the system was able to find it and enable it. I used `curl` and `elinks` to verify the service was up and running. I'll say this about Linux so far, I DEFINITELY need to have this entire thing color-coded (coated?). It's so much information on the screen, it's hard to decipher it all. I didn't even see that the file couldn't be found at first until I completed the lab. I was like how did they know that? After running the `journalctl` command again, I spotted it at the top. Anyway, cheers to logging. 
+
+The next two labs are working with MTA and CUPS. I'm not going to document this but I will post some insights if I find anything interesting. UPDATE: Nothing interesting at all although it was weird sending an email like that. Felt..primitive. 
+
+7th lab is monitoring network traffic. Right up my alley. So this lab was kind of interesting. We had two servers and we sent traffic between the two machines. We used a prehistoric looking application called `iptraf-ng` to turn on network logging and send all the output to a text file. While that was running in the background, I opened up a new terminal to start sending and receiving traffic. We used the `nc` command on a specific port to connect to the other machine. Everything we typed afterwards would appear in the second machine's terminal. Very interesting. Then, we reviewed the traffic log file to make sure we saw the port 2525 traffic. I used `grep` to filter for the port number and I saw some traffic from the source and destinations. 
+
+5 labs left. I'm going to take a break. This is already stressing me out with the network labs because it's 18 of them. And I want to document all 18. I may have to reconsider. But we'll see. 
+
 
 
 ## 12.02.2024
