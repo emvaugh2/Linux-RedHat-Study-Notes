@@ -21,7 +21,9 @@ The next two labs are working with MTA and CUPS. I'm not going to document this 
 
 7th lab is monitoring network traffic. Right up my alley. So this lab was kind of interesting. We had two servers and we sent traffic between the two machines. We used a prehistoric looking application called `iptraf-ng` to turn on network logging and send all the output to a text file. While that was running in the background, I opened up a new terminal to start sending and receiving traffic. We used the `nc` command on a specific port to connect to the other machine. Everything we typed afterwards would appear in the second machine's terminal. Very interesting. Then, we reviewed the traffic log file to make sure we saw the port 2525 traffic. I used `grep` to filter for the port number and I saw some traffic from the source and destinations. 
 
-5 labs left. I'm going to take a break. This is already stressing me out with the network labs because it's 18 of them. And I want to document all 18. I may have to reconsider. But we'll see. 
+5 labs left. I'm going to take a break. This is already stressing me out with the network labs because it's 18 of them. And I want to document all 18. I may have to reconsider. But we'll see.
+
+We completed a DNS lab and a sudoers lab. I'm not extremely familiar with DNS and I didn't really understand the sudo lab so I'll have to go back and ask Chat GPT to breakdown what was happening. 
 
 
 
