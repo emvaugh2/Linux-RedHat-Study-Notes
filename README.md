@@ -25,6 +25,19 @@ Now, I'm too beginner to see why I would truly need to do this besides logging f
 
 ![Image](BashUtilityCommands.PNG)
 
+`/dev/null` is a blackhole for information. 
+
+LOL just got to demoggification or UUOC: useless use of cat. I do this all the time. I'll break the habit. 
+
+Lets talk variables. Bash variables do not have data types (like strings, integers, etc.). All variables start with a "$" sign when you want to call it. Here are some Bash variables that are already built in: SHELL, LANG, MAIL, PATH, and HOSTNAME. Keep in mind, you can also make entire directories and files a variable in your Bash script.
+
+Function - used to group code in a logical way. You can create the function in a script (lets say you define a function called cloud). Then you can simply type `cloud` in your script and it will call the function. The function will not run unless you call it. You can define it but it only just defines it. To call it, you have to type out your function name afterwards. Another way to define a function is to use `<function name> () { }`. For example, `cloud () { }` is the same as `function cloud { }`. 
+
+When you use $1 and $2, you have to pass these parameters into the function when you call on it. In the same line. I'm used to the CLI prompting you for the additional parameters. I'll keep this in mind. 
+
+Array = matrix. For example, `NUMBERS=(1 2 3 4 5)`. If you `echo $NUMBERS`, you only get the first (index 0) value. You have to specifically state which value you want by doing `echo ${NUMBERS[2]}`. If you use `echo ${NUMBERS[@]}`, you'll get all the values. To find the numbe of indexes in the array, you can do `echo ${#NUMBERS[@]}`. If you want to know the index list, then use `echo ${!NUMBERS[@]}`. You can add an addition to the array using NUMBERS+=(9) or whatever value you want to add. Doesnt have to be the value 9. You can call portions of your array by doing `echo ${NUMBERS[@]:2:5}` which will call on the values from from 2 to 6. Be carefuly of that last index number. It goes to the number after that. Which is weird. 
+
+Command substitution - when you use a command in place of a variable. You can do `$(<insert command here>)` instead of predefining the variable. This allows you to use a command to get the information that you want (such as cat or grep or which or pwd) and feed it into a variable. It's like, skipping the part of creating the variable and just putting a command in it's place. I wouldn't necessarily say that. Think of it as, say you want to create a variable to be used later. You can create this variable based on the command that you want it to do so the variable will have the information you need later. I think that's how that works. 
 
 
 
