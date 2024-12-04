@@ -9,9 +9,27 @@
 
 Okay on to the fun stuff! 
 
-All of these script files have to start with the she bang `#!/bin/bash` (or /sh). 
+All of these script files have to start with the she bang `#!/bin/bash` (or /sh). Also remember, the ~ denotes the home directory. If you type `env`, the CLI should print out all the environment variables you have in your current session. Use the \ character to escape the next character. We'll go into more detail on this later. 
 
 ![Image](BashSpecialCharacters.PNG)
+
+Lets talk exit statuses. It's a number that is returned to the shell (you may or may not see this number) that lets you know if a command or script failed. The Zero exit status implies the script or program ran to completion and everything is fine. The Non-Zero exit status results can vary based on the script or program that generated the exit status. You can do and/or lists by using && and ||, respectively. For the or || syntax, the right side of the or will only execute if the left side failed. 
+
+You can set custom exit codes as well. Lets talk about redirecting I/O (input and output). I'm familiar with this based on echo and appending. I'm still not super sure on why we need the opposite direction though. It was stated to "redirect file as input for a command" but my thing is, why not just us `cat` for a file and pipe that into the command? Talked to Chat GPT. Basically, "<" is less taxing on computer resources. It's cleaner and easier to read. It can be more simple but also less flexible than the pipe (pause). 
+
+Redirecting stdout and stderr. Lets pump the brakes. Why are we doing this redirecting of stdout and stderr? Well I just had a whole conversation with Chat and from what I can see, this is a personal output control type of situation. When you run commands, you give the command an input (stdin which has a file descriptor of 0). You'll then get an output on your screen (stdout - file descriptor of 1). If there was an issue with your command (your command could've been partially successful for a fully failure), you'll receive some error messages on your screen (ex, file or directory doesn't exist) which has a stderr and file descriptor of 2. You can control where these error messages go. You can also just leave them on the screen. However, if you don't want them to go to a specific file for your own personal logging, you can use the syntax ` 2> error_log.txt]` to have all the error messages go to your (arbitrarily named) error_log.txt file instead of popping up in the CLI. Remember, you can choose whatever file name you want. 
+
+Say you want the output of your command and any error messages associated with it to all go to one file. You can use the `2>&1` syntax at the end of your command to make sure that all error messages go to the same file or destination as your regular output information. Why do you need the "&" sign? Well this lets Linux know that the "1' is a file descriptor and not a file itself. If you didn't put the "&" sign, Linux would just write the error messages to a file named "1" which it would automatically create. So here's an example. Say you do `touch file1.txt file2.txt file3.txt`. That will create the three files. Say you do `cat file1.txt file4.txt`. Well obviously, file4.txt doesn't exist so you'll get the output (stdout) of file1.txt but you'll get an error message (stderr) for file4.txt saying "No such file or directory exists". Say you want to write the output of `cat file1.txt file4.txt` to a completely new file called `output.txt`. You would do `cat file1.txt file4.txt > output.txt`. That's all fine and dandy. Your stdout info will get sent to the output.txt file but your error message (stderr) will show up in the CLI. Say you want both the stdout and the stderr (so error messages) to all go to one file and not show up on the CLI. You would do `cat file1.txt file4.txt > output.txt 2>&1`. That is the syntax to do that. This is what it's useful for. 
+
+Now, I'm too beginner to see why I would truly need to do this besides logging files and maybe feeding this info to other applications like Prometheus or something but I understand what's happening now. 
+
+![Image](BashUtilityCommands.PNG)
+
+
+
+
+
+
 
 
 ## 12.03.2024
