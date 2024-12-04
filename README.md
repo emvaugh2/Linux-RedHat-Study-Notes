@@ -5,11 +5,13 @@
 ## 12.04.2024
 
 **Today's Topics**
-* Bash Scripting
+* Bash Scripting (Chapter 1 - )
 
 Okay on to the fun stuff! 
 
-All of these script files have to start with the she bang `#!/bin/bash`
+All of these script files have to start with the she bang `#!/bin/bash` (or /sh). 
+
+![Image](BashSpecialCharacters.PNG)
 
 
 ## 12.03.2024
