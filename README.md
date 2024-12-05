@@ -2,10 +2,18 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 12.05.2024
+
+**Today's Topics**
+* Linux Labs
+
+This is definitely going to be a lab day. I have about...30 labs to do. I will not be doing all of them but I will get through a good amount before I shift over to Docker for a second. I'll post all the nights I can here. 
+
+
 ## 12.04.2024
 
 **Today's Topics**
-* Bash Scripting (Chapter 1 - )
+* Bash Scripting (Chapter 1 - 13)
 
 Okay on to the fun stuff! 
 
@@ -38,10 +46,6 @@ When you use $1 and $2, you have to pass these parameters into the function when
 Array = matrix. For example, `NUMBERS=(1 2 3 4 5)`. If you `echo $NUMBERS`, you only get the first (index 0) value. You have to specifically state which value you want by doing `echo ${NUMBERS[2]}`. If you use `echo ${NUMBERS[@]}`, you'll get all the values. To find the numbe of indexes in the array, you can do `echo ${#NUMBERS[@]}`. If you want to know the index list, then use `echo ${!NUMBERS[@]}`. You can add an addition to the array using NUMBERS+=(9) or whatever value you want to add. Doesnt have to be the value 9. You can call portions of your array by doing `echo ${NUMBERS[@]:2:5}` which will call on the values from from 2 to 6. Be carefuly of that last index number. It goes to the number after that. Which is weird. 
 
 Command substitution - when you use a command in place of a variable. You can do `$(<insert command here>)` instead of predefining the variable. This allows you to use a command to get the information that you want (such as cat or grep or which or pwd) and feed it into a variable. It's like, skipping the part of creating the variable and just putting a command in it's place. I wouldn't necessarily say that. Think of it as, say you want to create a variable to be used later. You can create this variable based on the command that you want it to do so the variable will have the information you need later. I think that's how that works. 
-
-
-
-
 
 
 
