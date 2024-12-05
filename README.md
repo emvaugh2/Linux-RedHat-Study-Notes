@@ -48,6 +48,9 @@ Array = matrix. For example, `NUMBERS=(1 2 3 4 5)`. If you `echo $NUMBERS`, you 
 Command substitution - when you use a command in place of a variable. You can do `$(<insert command here>)` instead of predefining the variable. This allows you to use a command to get the information that you want (such as cat or grep or which or pwd) and feed it into a variable. It's like, skipping the part of creating the variable and just putting a command in it's place. I wouldn't necessarily say that. Think of it as, say you want to create a variable to be used later. You can create this variable based on the command that you want it to do so the variable will have the information you need later. I think that's how that works. 
 
 
+****************** Forgot to press commit so I lost about 3 paragraphs of notes. But please believe me when I said I went over all the Flow Control info. 
+
+
 
 ## 12.03.2024
 
