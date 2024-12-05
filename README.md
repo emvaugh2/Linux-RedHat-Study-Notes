@@ -9,6 +9,24 @@
 
 This is definitely going to be a lab day. I have about...30 labs to do. I will not be doing all of them but I will get through a good amount before I shift over to Docker for a second. I'll post all the nights I can here. 
 
+Lab 1 - Locating Network Information:
+Just quick notes so when I come back to this, I can document it quickly. I used `grep` to get the output I needed into the Network.txt file. The commmand was `nmcli d show ens5 | grep IP4.{AGD] > Network.txt` which basically just takes the network information from interface ens5 but the lab asked specifically for the IP, DG, DNS IP, and domain. That's why I used that `grep` and did the RegEx type thing with the `[AGD]` characters. Got me the exact output. Also, the "d" in this previous command stands for "device". Make a habit of installing tab completion (`yum install bash-completion`) so you can get familiar with what all these non-flag things are. I REALLY HATE when instructors don't type out everything. Its hard for newcomers to know what it all means. I always tab out everthing in the Cisco CLI just so if anybody is watching, they can follow along. 
+
+Lab 2 - Setting a Static IP:
+This one was pretty straightforward. I'll have to ask Chat GPT to break down all of the commands. For example, it seems that we have to specify the Name (System) before we reference an interface. Also, how do I know if the device's IP was set dynamically in the first place? I get how manually configuring the info and then restarting the network system will make sure that the new IP info persists but I would like to know how it was dynamic initially. Lastly, I'm going to reiterate the tab completion feature. `con` and `mod` are short for connection and modify. This could be obvious but I would like to know specifically if that's it. Also, tab definitely helps to make sure you have the right command. Extremely useful 
+
+Lab 3 - Multiple IPs on the Same Interface
+Interesting. So the output without generally specifying an interface from `nmcli connection show` will give you a bunch of output. There appears to be two separate sections of IPv4 information. One is capitalized and the other is lowercase. The uppercase section had the original IP for eth0 as 10.0.1.10. After we added the two new IPs, those IPs showed up in the lowercase section for IPv4. I wonder why this is. I'll ask Chat GPT. Other than that, this is a pretty straightforward lab. Im just following the instructions so I can get the commands under my fingers and explore. Also, just typing `nmcli` will show you the info for your interfaces as well. I had to restart it twice but the second time, the output showed the 3 IPs for the interface. Interesting
+
+Lab 4 - Creating an Interface Team
+Okay I think typing "manual" in the interface connection configuration specifies a static IP. I think. I'll ask Chat. This lab was pretty straightforward too in the sense of, while I've never done this before, I'm familiar with the process of setting up a port-channel interface in Cisco. So it's basically just memorizing this process. I'll ask Chat the smaller details as to why the process is exactly this way (more so verifying that the interfaces are up, how to tell the difference between deleting a connection and a device, what exactly does it mean to delete a connection, etc) and what's the order of operations for setting up the Master and Slave interfaces. Seems like you have to bounce them in the right order. 
+
+Lab 5 - Working with Static Routes
+Find out what `host` does. They did `host google.com`. It listed the PIPs but I want to make sure I understand it exactly. Also, go over the `ip route show` output. I want to make sure I understand every part of this output. Very interesting way to block traffic. I'll say that. 
+
+Alright 5 labs down, 13 more to go. Taking a break. I'm only going to do 6 today and then a few Bash labs. Or who knows. I might bulldoze through all the networking labs today although I definitely should not do that. But this is fun because I'm familiar with this and this course was DIFFICULT. But the labs seem way more manageable. I doubt I'll remember how to make a DNS server and all that from scratch but at the least, I should be familiar with static IPs and routes, interface configuration, port channels and all that using the `nmcli` command. So I'll make sure I keep those skills up to date. 
+
+
 
 ## 12.04.2024
 
