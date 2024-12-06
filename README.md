@@ -26,6 +26,27 @@ Find out what `host` does. They did `host google.com`. It listed the PIPs but I 
 
 Alright 5 labs down, 13 more to go. Taking a break. I'm only going to do 6 today and then a few Bash labs. Or who knows. I might bulldoze through all the networking labs today although I definitely should not do that. But this is fun because I'm familiar with this and this course was DIFFICULT. But the labs seem way more manageable. I doubt I'll remember how to make a DNS server and all that from scratch but at the least, I should be familiar with static IPs and routes, interface configuration, port channels and all that using the `nmcli` command. So I'll make sure I keep those skills up to date. 
 
+Lab 6 - Establish Local Resolution
+Okay the work day caught up with me. This might be my last lab for the day. We'll see what I accomplish when I get back. But yeah. I don't understand this DNS stuff so I'll have to ask Chat GPT about it. Label completed though. 
+
+Lab 7 - Creating Name Servers
+Didn't understand any of this. I think I'm going to call it one.  
+
+Lab 8 - Troubleshooting DNS
+This one actually isn't too crazy. I still need to make sure I understand all the output from `di`g and `curl`. I'm just not familiar with DNS so I don't know how to troubleshoot it. But this was simple enough where I can learn what's going on. No real notes. Just,I'm considering coming back to this. 
+
+Lab 9 - Testing a Connection
+Going to skip over the firewall labs for now because I want to be fresh to absorb as much information as possible. It's 11:09pm currently. Anyway, just like that I wish I didn't skip the firewall labs because we definitely made some firewall changes. I really gotta learn how curl works. But I see we added HTTP and HTTPS as services in the firewall. That's a bit weird. I would personally just add ports 80 and 443 but I guess....if we add it by service, we can use any port. We did this on the service side. We then went on the client side and used telnet to test connection on port 443 on the server. We were able to see all the plain text being typed. 
+
+Lab 10 - Performing a Packet Capture
+We were able to split the screen on a service into two terminals using the `screen` command. We started a new terminal using just `c` and we were able to run a packet capture on the right screen while sending data to our own server on the left screen. This was a bit trippy. I couldn't read the packet capture information too well but it did have data in it. 
+
+Lab 11 - Port Forwarding with the Firewall
+We'll need to go over what masquerading does. Looks like we just created a testing zone on the firewall for some source traffic to go to a port 80 on Server 2. I guess masquerading allows us to enable port forward. Now, they had a long port forwarding command that I just copied and pasted but I can ask Chat to break that down for me later. 
+
+Lab 12 - Proxy Servers
+Okay this will be the last lab for today. At least the last networking lab. I'm not familiar with proxy servers. I should definitely be familiar with port forwarding as a network engineer but I just haven't had to do this at all. I'm not going to say I don't care about Proxy Servers but I will say I'm not going to retain this knowledge because I haven't needed and I'm not sure when I will need it. This seemed straight forward. We had to download and enable `squid`. Then we made some changes to the conf file. We added a whitelist with .linuxacademy.com as one of the websites. We then commented out http_access localnet. Then we exported the http_proxy on the client machine (not sure what this does) and then we curled linuxacademy.com to make sure we could get it and only it. 
+
 
 
 ## 12.04.2024
