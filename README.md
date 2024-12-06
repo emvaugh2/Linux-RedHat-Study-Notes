@@ -2,12 +2,20 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 12.06.2024
+
+**Today's Topics**
+* Linux Labs (Part 2)
+
+Okay I made it through 12 of the 18 networking labs. I have 6 more to go and then I have 5 scripting labs. I don't think I'm going to do all of these tomorrow but we'll see. I know the scripting is more important to me. I can handle the networking stuff if I just see it a bit more. 
+
+
 ## 12.05.2024
 
 **Today's Topics**
 * Linux Labs
 
-This is definitely going to be a lab day. I have about...30 labs to do. I will not be doing all of them but I will get through a good amount before I shift over to Docker for a second. I'll post all the nights I can here. 
+This is definitely going to be a lab day. I have about...30 labs to do. I will not be doing all of them but I will get through a good amount before I shift over to Docker for a second. I'll post all the notess I can here. 
 
 Lab 1 - Locating Network Information:
 Just quick notes so when I come back to this, I can document it quickly. I used `grep` to get the output I needed into the Network.txt file. The commmand was `nmcli d show ens5 | grep IP4.{AGD] > Network.txt` which basically just takes the network information from interface ens5 but the lab asked specifically for the IP, DG, DNS IP, and domain. That's why I used that `grep` and did the RegEx type thing with the `[AGD]` characters. Got me the exact output. Also, the "d" in this previous command stands for "device". Make a habit of installing tab completion (`yum install bash-completion`) so you can get familiar with what all these non-flag things are. I REALLY HATE when instructors don't type out everything. Its hard for newcomers to know what it all means. I always tab out everthing in the Cisco CLI just so if anybody is watching, they can follow along. 
