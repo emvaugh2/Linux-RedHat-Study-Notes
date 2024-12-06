@@ -9,6 +9,15 @@
 
 Okay I made it through 12 of the 18 networking labs. I have 6 more to go and then I have 5 scripting labs. I don't think I'm going to do all of these tomorrow but we'll see. I know the scripting is more important to me. I can handle the networking stuff if I just see it a bit more. 
 
+Lab 13 - Create an SSH Tunnel
+This lab was pretty straightforward. They just had one command that established the SSH tunnel and then we verified that it was working by using `curl`. Not too many meaningful insights but I will ask Chat GPT to breakdown the SSH command. It was only one. 
+
+Lab 14 - Creating a Load Balancer
+`haproxy` was the load balancing solution of choice for this lab. This wasn't crazy. You set up `haproxy` on the main server. You change the configuration files to include your frontend and backend information. Then you go to your two backend nodes to make sure they're listening on the correct port. Then on your client, you do a `curl` to make sure it's working. Now, my client was only getting a response from Server 2. I ran a script to do curl 10 times in a row. All came back from node 2. On the server side, it was getting a response from node 1. Still not totally sure why that is. 
+
+Lab 15 - Setup OpenVPN
+We'll revisit this. I'm having a hard time getting through this lab. We'll come back to it tomorrow. 
+
 
 ## 12.05.2024
 
