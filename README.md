@@ -13,6 +13,11 @@ So this was pretty much a play off of the last script I created. Now, they wante
 
 I believe the second part of the lab, they wanted us to assign our date command to a variable. That was the substitution part of it. I didn't know to do this but that part was very straightforward. Honestly, that is how I prefer to do this type of work anyway. Still learning that I can do that in Linux. But this was a good lab. 
 
+Lab 3 - Using Variables in a Bash Backup Script
+This builds off of the previous two scripts. This time, we want to use a variable for the home directory so that any user can use the script to back up their files. Also, they wanted us to be able to pass a parameter to the script file so the user can name their log file whatever name they chose. The funny thing about it is the first time I made the script, I used the `$HOME` environment variable so I wouldn't have to copy the long home path. So I did the same thing here. Wherever the script had the file path, I just replaced it with the $HOME variable. The script also automatically named the log file as log_backup.txt or something. I replaced all of these occurrences with $1 so whenever a use ran the script and put a file name after the script name, it would pass the $1 the log file name they chose. I switched to the other two users and tried the script. It worked. Just in case you need it in the future, just replace all most of that stuff with `/$HOME/$1`. 
+
+Lab 4 - Implementing Bash Flow Control in an Existing Backup Script
+
 
 ## 12.09.2024
 
