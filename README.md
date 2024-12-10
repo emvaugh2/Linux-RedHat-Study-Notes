@@ -8,6 +8,11 @@
 **Today's Topics**
 * Linux Labs (Part 5)
 
+Lab 2 - Incorporating Substitutions in an Existing Backup Script
+So this was pretty much a play off of the last script I created. Now, they wanted us to incorporate timestamps before and after any work was completed. They said use the `date` command for this so I just googled timestamp command for Linux. I was given this from StackExchange `echo $(date +%x_%r)`. This worked perfectly. I copied and pasted in between the commands fed the ouput to the log_actions.txt file I created. It didn't work at first because I didn't realize the way they created the script, we had to feed the script name a log file name as parameter. After I figured that out, the script ran successfully. 
+
+I believe the second part of the lab, they wanted us to assign our date command to a variable. That was the substitution part of it. I didn't know to do this but that part was very straightforward. Honestly, that is how I prefer to do this type of work anyway. Still learning that I can do that in Linux. But this was a good lab. 
+
 
 ## 12.09.2024
 
