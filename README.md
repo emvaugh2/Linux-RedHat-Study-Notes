@@ -5,13 +5,43 @@
 ## 12.09.2024
 
 **Today's Topics**
-* Linux Labs (Part 3)
+* Linux Labs (Part 4)
+
+
+Bash Labs 
+Lab 1 - Using Bash to Write a Backup Script
+Here's the script I wrote. I didn't look at the guide for this. I just experimented until I got the write one. I didn't even use Chat GPT.
+
+#!/bin/bash
+
+mkdir $HOME/work_backup
+
+touch $HOME/log_actions.txt
+
+cp -vR $HOME/work $HOME/work_backup > log_actions.txt 2>&1
+
+Lets explain this. You have to start off with the she-bang. I created the new work_backup directory to be the new storage place for the files. I used the $HOME environment variable to make sure each time, the directory was created in that specific user's home directory. I did the same thing for the log_actions.txt file. Then I used the copy command to copy all the files. You have to use the -R option to recursively copy all the files in the original directory. I also had to use the -v option for verbose so the OS can tell us exactly what each action was doing. I wanted all the stdout and the stderr messages so I directed alll of this output to a log_actions.txt file. The 2>&1 redirect just makes sure to get the stdout and stderr output. 
+
+Simple enough. 
+
+Good night. 
 
 
 ## 12.08.2024
 
 **Today's Topics**
 * Linux Labs (Part 3)
+
+Lab 16 - Permitting and Blocking Traffic with the Firewall
+This lab wasn't crazy at all. We just made sure the firewall was running and listening on port 80. We tried a curl but it wasn't permitted in the firewall. We made a rule specifically for `Client1` to connect to the server but not `Client2`. We did a curl from both clients. Then we saved the firewall rules. 
+
+Lab 17 - Advanced Firewalld
+This was above me but we created a new service and put this service in the default zone. We added two subnets to an IPset and made a rich rule for the IPset. I'm not sure why you would need to do this but that's what we did. Seems a bit convoluted. 
+
+Lab 18 - Firewall Troubleshooting
+We just wanted to figure out why the client couldn't connect to the server on port 80. We checked that the firewall was running and that it was listening on the correct port. After doing a `firewall-cmd --list-all`, we noticed the rule blocking the 10.0.1.0/24 subnet was before the rule accepting the traffic from 10.0.1.11 which is obviously a problem. We then created a new zone for the 10.0.1.11 resource but once again, I don't know why we did this. I would've just reordered the rules. 
+
+Anyway, that completes all the Linux Networking labs. I have 5 Bash labs to do I believe. I'll do one tonight at the very least. The networking labs were way more fun than the course material. Overall, it was nice to know we can change a Linux server into any type of networking service we need. I have to continue to wrap my head around that. I'll do some of these periodically just to keep these skills fresh. 
 
 
 ## 12.07.2024
