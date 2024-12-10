@@ -17,6 +17,7 @@
 
 Bash Labs 
 Lab 1 - Using Bash to Write a Backup Script
+
 Here's the script I wrote. I didn't look at the guide for this. I just experimented until I got the right one. I didn't even use Chat GPT.
 
 #!/bin/bash
@@ -27,7 +28,7 @@ touch $HOME/log_actions.txt
 
 cp -vR $HOME/work $HOME/work_backup > log_actions.txt 2>&1
 
-Lets explain this. You have to start off with the she-bang. I created the new work_backup directory to be the new storage place for the files. I used the $HOME environment variable to make sure each time, the directory was created in that specific user's home directory. I did the same thing for the log_actions.txt file. Then I used the copy command to copy all the files. You have to use the -R option to recursively copy all the files in the original directory. I also had to use the -v option for verbose so the OS can tell us exactly what each action was doing. I wanted all the stdout and the stderr messages so I directed alll of this output to a log_actions.txt file. The 2>&1 redirect just makes sure to get the stdout and stderr output. 
+Lets explain this. You have to start off with the she-bang. I created the new work_backup directory to be the new storage place for the files. I used the $HOME environment variable to make sure each time, the directory was created in that specific user's home directory. I did the same thing for the log_actions.txt file. Then I used the copy command to copy all the files. You have to use the -R option to recursively copy all the files in the original directory. I also had to use the -v option for verbose so the OS can tell us exactly what each action was doing. I wanted all the stdout and the stderr messages so I directed all of this output to a log_actions.txt file. The 2>&1 redirect just makes sure to get the stdout and stderr output. 
 
 Simple enough. 
 
