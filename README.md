@@ -17,7 +17,7 @@
 
 Bash Labs 
 Lab 1 - Using Bash to Write a Backup Script
-Here's the script I wrote. I didn't look at the guide for this. I just experimented until I got the write one. I didn't even use Chat GPT.
+Here's the script I wrote. I didn't look at the guide for this. I just experimented until I got the right one. I didn't even use Chat GPT.
 
 #!/bin/bash
 
