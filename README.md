@@ -3,6 +3,39 @@
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
 
+## 12.11.2024
+
+**Today's Topics**
+* Linux Labs (Part 6)
+* Red Hat Certified System Administrator Course (Chapter 1
+
+Lab 4 - Implementing Bash Flow Control in an Existing Backup Script
+Okay this lab beat me over the head haha. So this one also built off of the previous scripts. We needed to create a function to cancel the script and clean up any work the script has done. I didn't know how to do this at all (besides creating the function) so I needed Chat GPT to walk me through every part. Fyi, I've never worked with traps and any form of the `sleep` command so this was new to me. Alright lets talk about it. 
+
+In the beginning of the script, the guide created a function called `ctrlc` that will basically remove the backup files and directory the script has created. This part was pretty straight forward. You just have to be aware of the function format which is function ctrlc { ... }. The one thing I didn't really know was the the guide used an `exit code 255` command in the function. Chat GPT was saying the exit code tells you if the script was successful or not. An exit code of 0 is successful. Anything else just indicates something different. The user can give the script any number exit code they want (these exit codes are 8-bit in structure). It's nice to give it an exit code based on how you plan on interpreting your script. It can also let you know when a specific part of the script didn't work properly. 
+
+Afterword the script was defined, the guide used the command `trap ctrlc SIGINT` which I had no clue what this meant. Lets break it down. Obviously the `ctrlc` part is referencing the function above this line. Let's start with SIGINT. When you press Ctrl + C (just in general in the Linux CLI), it will stop a process. When you press this, it sends the system a SIGINT which stands for signal interrupt. It says hey stop this process! So the line basically says, if you get a SIGINT sent to the system, trigger this trap right afterwards. Don't just stop the process. Once the trap is triggered, it will run the ctrlc function. So it's kinda like Ctrl + C -> `SIGINT trap ctrlc` in my mind but this is just the syntax they use. 
+
+We also had to make an if loop that says if the user didn't pass an argument to the script, exit the script and tell them you need to give us something as a parameter. I understand if loops and the echo statement but obviously I just need to get more familiar with the Bash format. The one part I didn't understand was `if [ -z "$1" ]; then` (I believe this was the exact line but that's not important). I didn't know what that `-z` stood for and why we needed the quotations around the parameter variable. Now I forgot why we needed the quotation marks but lets focus on the `-z`. That basically says if the parameter has 'zero length' (I'm not sure if it said a string of zero length or a value), then this statement is true. If the statement is true, it will trigger the if loop. So that makes sense. If the parameter value is nothing, then trigger the loop saying "Give us a value". What I didn't understand is the guide also gave this if statement an exit code of 255. I'm like wouldn't you want it to have another value?? I don't know. 
+
+Lastly, we had the actual script and everything but at the bottom of the script, we used `sleep 15` which basically says don't do anything with this script for the next 15 seconds. This is so you're able to actually press Ctrl + C because the script will run very quickly. It's not possible to press Ctrl + C that quickly. This gives you time to actually trigger the trap once you send the SIGINT to the system. So basically the script will run through all these lines so it will actually create the backup files and log file but once you trigger the trap, it will remove everything it created. You have 15 seconds to make a decision.
+
+So the lab definitely makes sense. This was a little above me though but I know practice makes progress so we'll keep learning!
+
+Lab 5 - Implementing Bash Regex in an Existing Backup Script
+So while I was able to complete this lab on my own, the guide solution was a little different (more thorough but also more convoluted). So they basically wanted us to only backup the files that had adent and financial in the file names using Regular Expressions (RegEx). Now, I'm just getting slightly familiar with `grep` let alone the RegEx extension. So here's what I did below:
+
+`cp -v /home/$USER/work/{aden,fina}* /home/$USER/work_backup/ >> /home/$USER/$MYLOG`
+
+I just added aden and fina to the end of the directory so that it only matches the files that have those two terms in their file name followed by anything else (hence the asterisk). Now, I know this isn't that thorough because my backup files all began with adent, financial, or football. If they didnt START with these terms, my solution wouldnt work. But they did so it did lol. 
+
+The guide did a RegEx expression that looked something like `grep -E (adent|financial)` which probably just said if you find these two terms anywhere in the file, match on this. I didn't ask Chat GPT so don't quote me. Then they created a for loop to keep matching these file names and copy them over. They then commented out the line I altered above. 
+
+There are more than one way to skin a cat. I have to keep learning. But my solution worked so I'll take it as a win!
+
+We'll revisit Bash scripting but that's the end of the Bash scripting course. My last Linux thing I'm going to pay attention to will be the RHCSA course and then I'll move over to Docker. 
+
+
 ## 12.10.2024
 
 **Today's Topics**
