@@ -3,11 +3,33 @@
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
 
+## 12.12.2024
+
+**Today's Topics**
+* Red Hat Certified System Administrator Course (Chapter 1 - Chapter 2)
+
+I actually went through an Intro to Containers and Orchestration course yesterday. It was a nice review. May look at Docker and RHCSA at the same time. 
+
+
 ## 12.11.2024
 
 **Today's Topics**
 * Linux Labs (Part 6)
-* Red Hat Certified System Administrator Course (Chapter 1
+* Red Hat Certified System Administrator Course (Chapter 1 - Chapter 2)
+
+RHCSA Material
+You can documentation in the /usr/share/doc. I'm not really sure what the difference between the man and info commands are. I've been using man this entire time. Look at all three I guess. 
+
+You can find the LICENSE file in the `/usr/share/doc` directory. Then navigate to the service that you're looking for (`httpd` for example) and then it should be listed in that service's directory. Along with a readme, versioning, etc. All of that. 
+
+You can use the `tree` command to see all the directories and files listed in a directory for whatever directory you choose. This can be a lot of ouput. But it's also very useful. 
+
+For grep, you can search for a phrase and put the destination right after that. For example, `grep httpd /var/log/* which says look for all httpd appearances in the /var/log directory and files. This is better than doing `cat /var/log/* | grep httpd`. Demoggification or whatever. 
+
+`wc` stands for word count. 
+__________________________
+
+Bash Material
 
 Lab 4 - Implementing Bash Flow Control in an Existing Backup Script
 Okay this lab beat me over the head haha. So this one also built off of the previous scripts. We needed to create a function to cancel the script and clean up any work the script has done. I didn't know how to do this at all (besides creating the function) so I needed Chat GPT to walk me through every part. Fyi, I've never worked with traps and any form of the `sleep` command so this was new to me. Alright lets talk about it. 
