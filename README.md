@@ -5,7 +5,43 @@
 ## 12.13.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course (Chapter 3 - Chapter X)
+* Red Hat Certified System Administrator Course (Chapter 6)
+
+We're going to start at Chapter 6 because 6 and 7 are the biggest chapters and I would like to finish this course up. Chapter 6 is Creating and Configuring File Systems on RHEL 8. 
+
+xfs is the default file system for RHEL 8. You can grow xfs but not shrink it. You have a max size of 1 PiB. You also have ext4 which is the latest version of the ext file system. You can grow and shrink it. Max size of 50 TiB. vfat is used for working with multiple OS like Windows and Linux. It has a maximum theoretical size of 16 TiB. 
+
+The "f" in `fdisk` stands for format. This is how you create partitions on a block device. All you need to do is follow the prompt which is mostly just prressing enter. You can set the partition size here though. This does not put a file system on it. You still need to do `mkfs` to put the file system of your choice on the partition. 
+
+Always follow up with a file system check (fsck) after you've created your file system. You can use this command for ext4. You can use `xfs_repair` for xfs file systems. Check everything in `lsblk` as well. 
+
+Remember to us /etc/fstab to create persistent mounting of partitions. Use the UUID for this. You have to do `mount -a` after you've added these partitions to the `fstab` file. 
+
+NFS (Network File Systems) are exactly that, file systems for networking. Remember, Linux is the OS of files and directories. Almost everything is a file or directory. So this is specifically for networking. There are two versions: NFS V3 and NFS V4. Linux NFS is like a shared drive system on Windows. I think it's the actual file system and not a mounted shared drive. But it's like, how the Linux systems know how to find a shared drive. Does that make sense? We'll revisit this as well. 
+
+You need to add your shared folders to the `/etc/export` file to tell your OS what folders you want to share. I think you need to inlcude the IP address of the system hosting the shared folders. Now, you have to use `systemctl enable --now nfs-server` to make your OS an NFS server. We'll come back to this. 
+
+Lets talk `autosfs`. We have an autofs.conf file (defines how the autofs service itself works), auto.master file (the configuration file for all the file systems within autofs), and map files (individual configuration files for on-demand mount points). 
+
+Auto.master file - where we define all the file systems we want to mount with autofs. You only put the mount point and the location of the map file here. 
+Map file - where we configure out individual mount points. 
+
+Yeah this `autofs` stuff was confusing but I believe I got the hang of it. You have to specify on the NFS server which directories you plan to host. 
+
+On the client side, you have to configure the auto.master file to tell the autofs service which directories are being found on the NFS server and where to look for the rules for that directory. So specify the directory first and then point your distro to the file that will give it the directory rules/info. This second part is the actual map file. You can name a map file anything you want but it would be better to start it with `auto.<whatever>` just for a good naming convention. You can do `auto.data`, `auto.dogs`, whatever. It's up to you. 
+
+Lets head to the map file such as `auto.home`. You create this file from scratch. This is where you give your autofs the rules. Say you put `* 127.0.0.1:/home/&`. Lets break it down. The asterisk * says all users need to follow this rule. Anybody who access this file will follow this rule. The 127.0.0.1 loopback address is just stating where IP address of the NFS server. This could change if your NFS server was on a different subnet or a PIP. The /home part says that you're looking for the /home directory. The & is like a wildcard as well. If you're the user Manny, it will swap the & for Manny. 
+
+After you do this, you'll need to enable or restart your autofs service using `systemctl`. Don't play with autofs.conf. This is if you want to change the way the autofs service behaves. You most likely won't have to do this. Only mess with the map files and auto.master files. 
+
+I believe also in this case, you need to create these directories on your NFS server first. So the /export/home directory needs to be created. Go back over the video and see where you do this. They had to create the directories and then go into /etc/exports and define both shared drive folders here with the options. You have to do this first before doing the autofs. We'll revisit this. 
+
+
+
+
+
+
+
 
 
 ## 12.12.2024
