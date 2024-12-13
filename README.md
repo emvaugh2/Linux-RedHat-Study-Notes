@@ -2,11 +2,16 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 12.13.2024
+
+**Today's Topics**
+* Red Hat Certified System Administrator Course (Chapter 3 - Chapter X)
+
 
 ## 12.12.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course (Chapter 1 - Chapter 2)
+* Red Hat Certified System Administrator Course (Chapter 1 - Chapter 3)
 
 I actually went through an Intro to Containers and Orchestration course yesterday. It was a nice review. May look at Docker and RHCSA at the same time. 
 
