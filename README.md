@@ -10,6 +10,8 @@
 
 I actually went through an Intro to Containers and Orchestration course yesterday. It was a nice review. May look at Docker and RHCSA at the same time. 
 
+The `tar` command by itself doesn't do anything so you always have to have options. Make sure you're familiar with the common options like c, z, f, x, v, t, etc. 
+
 
 ## 12.11.2024
 
