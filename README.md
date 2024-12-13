@@ -37,7 +37,17 @@ After you do this, you'll need to enable or restart your autofs service using `s
 I believe also in this case, you need to create these directories on your NFS server first. So the /export/home directory needs to be created. Go back over the video and see where you do this. They had to create the directories and then go into /etc/exports and define both shared drive folders here with the options. You have to do this first before doing the autofs. We'll revisit this. 
 
 
+"Okay so when you use chown to set the group owner to marketing, the directory will have the root user as the owner and the marketing group as the group owner. 
 
+If Manny has his secondary group as marketing and his primary group as Manny, he still technically has the rights to make a file in this directory because the group owner is marketing which he's a part of. 
+
+When he creates a file, he will be the owner and the group owner will inherit his primary group which is Manny. So that's why we see Manny Manny. 
+
+When we set a GUID or whatever for the directory (lets say engineering), no matter who creates a file or their group ownership, the file will always have a group ownership of engineering."
+
+Okay I finally understand why GUIDs are important and the User version as well but lets talk about GUIDs. When you use set-GID, the group owner of all files in that directory will always be whatever group you set. You can set the user and owner of a directory and file using `chown`. Depending on the user's primary and secondary group, they can make changes to a directory or files in a directory. If the user's secondary group is the same as the directory's group, they can make changes although their primary group can be different. So when you do `ls`, the user and group would be that user and their PRIMARY group (which could also just be their name if the primary group wasn't set when you created this user). If you want to make sure that every file and directory is still the group that you want it to be, use the `set-GID` command.
+
+As far as the SUID, this will make sure no matter what process is being run by whatever user, the process owner will be the one you set. It's like letting someone run something in sudo but they don't have the sudo password. They can run the process but since root is the owner, the process will execute. It's a way of elevating privileges in a safe way. 
 
 
 
