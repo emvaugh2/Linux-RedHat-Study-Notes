@@ -49,7 +49,18 @@ Okay I finally understand why GUIDs are important and the User version as well b
 
 As far as the SUID, this will make sure no matter what process is being run by whatever user, the process owner will be the one you set. It's like letting someone run something in sudo but they don't have the sudo password. They can run the process but since root is the owner, the process will execute. It's a way of elevating privileges in a safe way. 
 
+Do I need this Stratis stuff? And this VDO stuff? Apparently it's not even on the test. I'll revisit it if I ever need it on the job. 
 
+Chapter 7 - Deploying, Configuring, and Maintaining RHEL 8 Systems. 
+
+`at` is good for one time jobs. `cron` is good for recurring jobs. Cron jobs are located in /etc/crontab. The directory for packages to add cron entries is /etc/cron.d. You go to /var/spool/cron for crontabs created via crontab -e. 
+If you cat the /etc/crontab, it will show you format on how to build a cron job so definitely get familiar with it. 
+
+To see a list of the crontabs or edit the crontab, use `crontab -l` and `crontab -e`, respectively. 
+
+You need to make sure `cronie` is installed first. This is how you can use the cron service and make sure it's enabled using `systemctl`. 
+
+`cron.d` is for service-specific tasks like httpd, nginx, and mysql. They might appear when you download these packages. You can modify them and add your own but they're usually separate from the manually configured crontab tasks that you create. Think of it as like, Windows as a Service. You might have an application that runs routine maintenance. The funny part about the maintenance is it would also be scheduled in the cron.d folder which sounds too simple to be true but that is where that application will automatically populate it's routine maintenance. The crontab is where you would just create some task from scratch and stick it here. 
 
 
 
