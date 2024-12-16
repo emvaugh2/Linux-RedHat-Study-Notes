@@ -15,6 +15,19 @@
 
 Chapter 7 - Deploying, Configuring, and Maintaining RHEL 8 Systems. 
 
+Use `chrony` instead of `ntp` for anything time related. You can go back over this lesson if you really need it. 
+
+You're already familiar enough with `systemd`. Just use `systemctl` to control all the services. 
+
+`dnf` is the same as `yum`. Just keep that in mind. 
+
+Okay lets go over Application Streams (AppStreams). AppStreams allow for multiple versions of an application (lets say Python) can exist on the server. You can have Python 3.1, 3.2, and 3.3. As you know, sometimes services are version specific so they need to have the write version of lets say Python in order to function. This also allows for you to install new versions of an application and test it to see if it works. 
+
+There are also profiles for each application version that only downloads the packages you need for that specific version. You have common (the usual package), devel (for developer), and minimal (for only the most basic version of the application). This allows you to only download what you need. It saves on disk space too. You can switch between both application versions and profile versions. 
+
+Now, you'll have a system wide version that you use but another team can log into a server and temporarily switch to a version and profile that suits them. So it just allows for flexibility when using applications. 
+
+
 ## 12.13.2024
 
 **Today's Topics**
