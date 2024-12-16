@@ -2,10 +2,17 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+
+## 12.16.2024
+
+**Today's Topics**
+* Red Hat Certified System Administrator Course 
+
+
 ## 12.15.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course (Chapter 7 cont.)
+* Red Hat Certified System Administrator Course 
 
 
 ## 12.14.2024
