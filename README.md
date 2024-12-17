@@ -6,7 +6,9 @@
 ## 12.16.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course 
+* Red Hat Certified System Administrator Course
+
+Busy day at work.
 
 
 ## 12.15.2024
