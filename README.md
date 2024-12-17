@@ -6,7 +6,9 @@
 ## 12.17.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course
+* Red Hat Certified System Administrator Course (Chapter 5)
+
+Use `fdisk` and `gdisk` to manage partitions. It will walk you through the process. This is also how you can allocate partitions for swap spaces. 
 
 
 ## 12.16.2024
@@ -20,7 +22,20 @@ Busy day at work.
 ## 12.15.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course 
+* Red Hat Certified System Administrator Course  (Chapter 4)
+
+The /var/log directory is the direction for system and application logs. `journalctl` is used for querying the systemd journal. Use persistent journals to log to disk journals persistenting across reboots. 
+
+Go to /etc/systemd/journald.conf. This is where you can change your logging mode to persistent. You need to change #Storage=Auto to #Storage=persistent. 
+
+`top` stands for "top-level" overview of the system's most resource-intensive tasks. It just displays the top processes currently running on the system. 
+
+Use the `renice` command to reset the nice value of a process. The nice value affects a process's scheduling priority, determining how much CPU time it gets relative to other processes. It's called nice becuse it determines how "nice" this process will be compared to other processes by yielding some CPU time. So basically how fair it plays with other processes that are also fighting for CPU time. Remember, niceness levels range from -20 to 19 (highest to lowest (yes, seems a bit backwards, I know)). You can do `renice <nice value> -p <pid>`. Straightforward. 
+
+The Tuned service is an intelligent application that uses system monitoring to optimize system performance for specific types of workloads. /etc/tuned/tuned-main.conf is the main configuration file for tuned. /etc/tuned is the location for custom profiles. It overrides /usr/lib/tuned configurations with the same name. /usr/lib/tuned is the distro-specific profiles, each stored in its own subdirectory. Each profile has its own tuned.conf configuration file. 
+
+Think of `tuned` like Window's Power Plan mode. Like hey once we get to a specific battery level, go into save battery mode. Or if our battery is at 100% and we're plugged into the charger, beef up all computer performance because you have the power to do so. `tuned` for Linux is the same thing. Although you statically set these tuned profiles, you can have your system enable dynamic tuned as well. 
+
 
 
 ## 12.14.2024
