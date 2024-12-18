@@ -2,6 +2,29 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 12.18.2024
+
+**Today's Topics**
+* Red Hat Certified System Administrator Course (Labs Pt. 1)
+
+I didn't do any of the labs. Just all the video series lessons and the quizzes. We have 24 labs to complete. Lets get started. 
+
+Lab 1 - Accessing Linux System Using RHEL 8
+First off I really have to go over this key generation thing. It messes me up every time. But I just learned that you can type `ssh user@IP` followed directly by a command to log into that server and run that command. That was pretty cool. I was able to tar a file and use `scp` without having to interact directly with the remote device's CLI. 
+
+Also, this lab was a lot more involved than all the previous labs. I'm going to have to play closer attention. 
+
+Lab 2 - Vim Survival Kit
+This is just making your more savvy with `vim`. If you just type vim, it will create a new empty file. You can do `:w <name of the file` to actually get it a name. Nice. 
+I definitely need to remember the main commands for navigating a vi or vim file. It will help me alter files so much easier. But so far, I know how to work with them enough to edit them. Nothing much here. Just shows you how powerful and agile Vim can be if you really get to know it. 
+
+Lab 3 - Using Input/Output Redirection and Analyzing Text on RHEL 8
+This lab did some of these actions in a convoluted way but I did learn a little about the `find` command. You can actually use this along with the `-exec` option to search for strings within a file, not just on the file or directory. So keep that in mind. 
+
+Lab 4 - Managing Files and Directories on RHEL 8
+I really only did the hard and soft link portion of this lab. Everything else I'm familiar enough with. Felt like overkill. 
+
+
 
 ## 12.17.2024
 
