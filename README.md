@@ -24,6 +24,17 @@ This lab did some of these actions in a convoluted way but I did learn a little 
 Lab 4 - Managing Files and Directories on RHEL 8
 I really only did the hard and soft link portion of this lab. Everything else I'm familiar enough with. Felt like overkill. 
 
+Lab 5 - Creating Simple Shell Scripts
+We just created a script to add and delete users based on a user file we fed the script as input. Pretty straightforward. I can always go back over the script syntax to get more familiar with every single detail. 
+
+Lab 6 - Managing SELinux on RHEL 8
+Now, I don't plan on fully learning this until I either try to take my RHCSA exam or get a job actually using this. So We're just going to run through this lab really quickly and call it a day. 
+Yeah not sure what I'm doing here but I do know I need to get more familiar with the `ausearch, semanage, restorecon, and semodule` commands. The `getenforce` and `setenforce` were pretty straightfoward. So was `sestatus`. But I still need to completely understand what SE is for. I know it's for security but I don't see why we need this additional step. 
+
+
+
+
+
 
 
 ## 12.17.2024
