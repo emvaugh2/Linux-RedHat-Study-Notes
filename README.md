@@ -6,17 +6,33 @@
 ## 12.17.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course (Chapter 5)
+* Red Hat Certified System Administrator Course (Chapter 5, 10, and 11)
+
+Use `getfacl` and `setfacl` to see and alter ACL info. 
 
 Use `fdisk` and `gdisk` to manage partitions. It will walk you through the process. This is also how you can allocate partitions for swap spaces. 
+
+We're familiar with persistent mounts using /etc/fstab. Here are the best device identifiers: Files System Identifiers > file system UUID and file system Label. Device Identifiers > World Wide Idenfitifer (WWID), Partition UUID, and device serial number. We can go over the structure of the fstab file though. You have the block device, the mount location directory, the file system type on the device, the mount options (defaults), the backup option, and the check order for fsck. 
+
+The backup option can have either a 0 or a 1 for the entry. The check order for fsck can be either 0, 1, or 2. For the backup option, 0 says skip the back up and 1 says back up the system. For fsck, 0 says skip fsck, 1 says check with the highest priority, and 2 says check the file system at the lowest priority. 
 
 
 ## 12.16.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course
+* Red Hat Certified System Administrator Course (Chapter 9)
 
-Busy day at work.
+Busy day at work. Just filling in notes here although it's the 17th. 
+
+`useradd`, `usermod`, and `userdel`. Same thing with groups. Use `passwd` to manage passwords for users. You can use groupmod to change the name of a group. 
+
+On modern distros, you have to use the `-m` flag in `useradd` to tell the system to add a home directory for that user. Home directories are not automatically created. This is because certain services like nginx and stuff can have user accounts too for specific purposes but they don't need a home directory. 
+
+A user can have only one primary group but can have multiple secondary groups. You can use `usermod` to change the secondary group for a user. Use `groups <username>` to get a user's group information. 
+
+Use `chage <username>` for an interactive prompt to change the parameters for a user's password. 
+
+
 
 
 ## 12.15.2024
