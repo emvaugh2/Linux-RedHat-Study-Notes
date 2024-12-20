@@ -8,14 +8,26 @@
 **Today's Topics**
 * Red Hat Certified System Administrator Course (Labs Pt. 2)
 
-Will return tomorrow. 
+Lab 7 - Managing File Systems on RHEL 8
+This lab was all about using our block devices to partition said block devices and assign them to a file system while also using `fstab` to keep that mounting point persistent. We also went through setting up a NFS but I still need to practice that. I understand the process but I would definitely have to practice this a lot. 
+
+Lab 8 - Working with File and Directory Permissions on RHEL 8
+This lab also wasn't too crazy. We just created some users and assigned them to primary and secondary groups (with passwords). The second half of the lab focused on GUID and sticky bits. I still need to get more familiar with the overlap of these commands. 
+
+Lab 9 - Managing Layered Local Storage with Stratis on RHEL 8
+We basically used Stratis to merge our block devices into a pool of storage. We can write directories and files to this pool. We then persistently mounted this pool in /etc/fstab. We used the stratis CLI commands to add block devices to this pool, create snapshots of our pool, and to destroy (erase) our pools. Seems pretty useful once you get the hang of it. 
+
+Lab 10 - Managing Storage Using LVM on VDO on RHEL 8
+We just did soome tasks with VDO. I was more interested in the script we ran and the file permissions than the actual VDO process. Im not learning this unless I need it. 
+
+Lab 11 - Managing the Boot Process on RHEL 8
+
 
 
 
 ## 12.19.2024
 
 **Today's Topics**
-* Red Hat Certified System Administrator Course (Labs Pt. 2)
 
 Will return tomorrow. 
 
