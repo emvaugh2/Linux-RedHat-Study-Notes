@@ -2,6 +2,17 @@
 
 **Greetings! I'll be publicly documenting my Linux upskill experience here. Cloud and DevOps professionals have been constantly stating that Linux is an important skill to have in the space so I'm going to spend a few months building those skills via courses and hands on labs. I highly doubt I'll be taking any Red Hat certifications but who knows. Maybe I'll attempt it.**
 
+## 12.21.2024
+
+**Today's Topics**
+* Red Hat Certified System Administrator Course (Labs Pt. 3)
+
+Lab 15 - Managing Packages and Using Application Streams in RHEL 8
+Tired. May have to go back through this lab again. I don't understand all of this module stuff. The AppStream material seemed pretty straightforward though. 
+
+
+Lab 16 - Managing the System Bootloader in RHEL 8
+
 
 ## 12.20.2024
 
