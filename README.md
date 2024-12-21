@@ -31,7 +31,8 @@ We also modified the `tuned` profiles which I didn't know you can have multiple 
 Lab 13 - Working with Log Files and Journals on RHEL 8
 We pretty much learned our way around using the  `journalctl` command and it's different options. The one I found the most useful was using `/NTP` (you can use whatever term or service you want) inside the actual `journalctl` output command to find the lines that contained NTP. You can also do an option to only query the logs for the last X amount of minutes. I would honestly just stick to grep for searching though. The last thing we did was make sure the logs were persistent. 
 
-Lab 14 - 
+Lab 14 - Managing Key Services on RHEL 8 - systemd/Scheduling/Time Services
+We pretty much went through the motions of using at, cron, and chrony for automated jobs and time servers. Nothing much to see here. 
 
 
 
