@@ -21,6 +21,10 @@ Lab 10 - Managing Storage Using LVM on VDO on RHEL 8
 We just did soome tasks with VDO. I was more interested in the script we ran and the file permissions than the actual VDO process. Im not learning this unless I need it. 
 
 Lab 11 - Managing the Boot Process on RHEL 8
+This lab was pretty straightforward. We messed around with the shutdown and reboot commands. The main thing that stood out to me was using `systemctl` to changing the target when booting up. I'm familiar with this commands and switching between the multi-user.target and the graphical.target settings. 
+
+Lab 12 - Managing Processes and Tuned Profiles on RHEL 8
+
 
 
 
