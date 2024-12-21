@@ -28,8 +28,10 @@ We actually did a lot in this lab. We used the `top` command to see which proces
 
 We also modified the `tuned` profiles which I didn't know you can have multiple profiles running at the same time. Lastly, we used grep to search through a tuned file but we used the `-n` flag which told us exactly which line our parsed information was found on. We then used `vi +<insert #>` to jump directly to that line. I have no clue you could do this. Grep and vi are so powerful. 
 
-Lab 13
+Lab 13 - Working with Log Files and Journals on RHEL 8
+We pretty much learned our way around using the  `journalctl` command and it's different options. The one I found the most useful was using `/NTP` (you can use whatever term or service you want) inside the actual `journalctl` output command to find the lines that contained NTP. You can also do an option to only query the logs for the last X amount of minutes. I would honestly just stick to grep for searching though. The last thing we did was make sure the logs were persistent. 
 
+Lab 14 - 
 
 
 
