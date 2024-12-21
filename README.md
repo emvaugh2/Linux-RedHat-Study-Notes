@@ -24,7 +24,11 @@ Lab 11 - Managing the Boot Process on RHEL 8
 This lab was pretty straightforward. We messed around with the shutdown and reboot commands. The main thing that stood out to me was using `systemctl` to changing the target when booting up. I'm familiar with this commands and switching between the multi-user.target and the graphical.target settings. 
 
 Lab 12 - Managing Processes and Tuned Profiles on RHEL 8
+We actually did a lot in this lab. We used the `top` command to see which processes were running and using up the most resources on our OS. We also used the stress test mixed with the `renice` commands to re-prioritize the `stress` process to see how it can affect our system. We went over multiple ways to kill a process. I think `pgrep` will be very useful in the future was far as finding the PID for a service. I didn't understand the process scheduling part because I don't remember us going over this. 
 
+We also modified the `tuned` profiles which I didn't know you can have multiple profiles running at the same time. Lastly, we used grep to search through a tuned file but we used the `-n` flag which told us exactly which line our parsed information was found on. We then used `vi +<insert #>` to jump directly to that line. I have no clue you could do this. Grep and vi are so powerful. 
+
+Lab 13
 
 
 
