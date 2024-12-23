@@ -7,6 +7,19 @@
 **Today's Topics**
 * Red Hat Certified System Administrator Course (Labs Pt. 4)
 
+Lab 23 - Managing Basic Networking on RHEL 8
+I saved this one for "last" since I knew I would most likely understand this one the easiest lol. We gave an interface an IP address, played around with DNS settings, and made sure NetworkManager starts automatically at boot. Pretty chill. 
+
+Lab 22 - Managing Containers on RHEL 8 Using podman
+Okay so this lab was actually pretty cool. We used  `podman` and `skopeo` to play around with some containers. We pulled a container down from the docker RedHat registry or something. Then we ran it and exited it. Then removed it. But I love how you can just spin up a whole new computer pretty much that quickly. Super nice. We tried to make a customer containier using `podman generate systemd` but they said this command has been deprecated. 
+
+
+Lab 21 - Managing the Firewall on RHEL 8
+We configured a web server and then changed access on the firewall via `firewall-cmd`. I'm not familiar with Drifting zones so that was beyond me but I know how to install, enable, and check the status of firewalld and Apache. So we're good there. 
+
+Lab 20 - Using File Access Control Lists (ACLs) on RHEL 8
+This lab was actually pretty helpful after coming back to the labs with a clear mind. The Linux ACLs have been confusing up to this point but it seems pretty straightforward now. You can have your usual permissions but you can also set permissions for certain users and groups as well. It's pretty straightforward enought to read. And that's all we pretty much did. Very helpful. 
+
 Lab 19 - Managing Users, Groups, and Superuser Access on RHEL 8
 We created and added users and groups. We then made changes to the `visudo` file. I've done all of this before. I still need to get more familiar with the `visudo` file but I'll revisit it. 
 
