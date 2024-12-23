@@ -7,6 +7,17 @@
 **Today's Topics**
 * Red Hat Certified System Administrator Course (Labs Pt. 4)
 
+Lab 19 - Managing Users, Groups, and Superuser Access on RHEL 8
+We created and added users and groups. We then made changes to the `visudo` file. I've done all of this before. I still need to get more familiar with the `visudo` file but I'll revisit it. 
+
+
+Lab 18 - Configuring Logical Management (LVM) Using RHEL 8
+Apparently you have to tell the kernel of a partition changing using `partprobe`. We created some partitions and used LVM to create some logical groups. We extended and reduced them. Very flexible. Straightforward. 
+
+
+Lab 17 - Managing Disk Partitions and Mounts on RHEL 8
+We pretty much just set up new partitions, assigned the partitions a file system and mounted them. Then we did persistent mounting. After that, we did the same thing with swap space block devices. 
+
 
 
 ## 12.21.2024
@@ -19,6 +30,7 @@ Tired. May have to go back through this lab again. I don't understand all of thi
 
 
 Lab 16 - Managing the System Bootloader in RHEL 8
+I'll fill in the notes laters. 
 
 
 ## 12.20.2024
