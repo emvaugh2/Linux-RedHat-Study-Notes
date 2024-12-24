@@ -7,6 +7,14 @@
 **Today's Topics**
 * Red Hat Certified System Administrator Course (Labs Pt. 4)
 
+Lab 24 - Red Hat Certified System Administrator (EX200) - v8 Exam Challenge Lab
+This is the last and final lab. It's 3 hours. I'm just going to go through the walkthrough but this shall complete my Linux studies. For now.
+Noticed I gave the repo file name the wrong extension (.rpo instead of .repo) and the OS did not like that at all. It wouldn't show the youtube-dl package in the EPEL repo. I used `mv /etc/yum.repos.d/epel.rpo /etc/yum.repos.d/epel.repo` to rename the file and that enabled it. 
+
+I've actually caught a few errors in the solution guide which is very nice. I noticed the `fstab` input they gave me didn't have the absolute path. `mount -a` didn't like that format. I changed it though. This was dealing with persistent mounts for Stratis.
+
+We literally did like all the RHCSA exam objectives in this one lab. I was able to follow everything although I don't fully understand every single step. I do see myself taking this test in the future. I think it would fair well in my GovTech journey but for now, I think this is all I need for a cloud role. This also took me like an hour and 45 minutes to complete. Very good practice. 
+
 Lab 23 - Managing Basic Networking on RHEL 8
 I saved this one for "last" since I knew I would most likely understand this one the easiest lol. We gave an interface an IP address, played around with DNS settings, and made sure NetworkManager starts automatically at boot. Pretty chill. 
 
