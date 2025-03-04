@@ -7,6 +7,8 @@
 **Today's Topics**
 * Red Hat Certified System Administrator Course (Labs Pt. 4)
 
+Let's get this summary created. 
+
 Lab 24 - Red Hat Certified System Administrator (EX200) - v8 Exam Challenge Lab
 This is the last and final lab. It's 3 hours. I'm just going to go through the walkthrough but this shall complete my Linux studies. For now.
 Noticed I gave the repo file name the wrong extension (.rpo instead of .repo) and the OS did not like that at all. It wouldn't show the youtube-dl package in the EPEL repo. I used `mv /etc/yum.repos.d/epel.rpo /etc/yum.repos.d/epel.repo` to rename the file and that enabled it. 
